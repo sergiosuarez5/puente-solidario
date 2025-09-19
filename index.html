@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Fundaciones Donar</title>
         <link rel="stylesheet" href="assets/css/style.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     </head>
     <body>
         <nav>
@@ -56,8 +57,21 @@
         </section>
         
         <section>
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label">Nombre</label>
+              <input type="text" class="form-control" id="exampleFormControlInput1" >
+            </div> 
 
-                <form action="php/codigo.php">
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+            </div>
+
+            <div class="mb-3">
+              <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+                <!-- <form action="php/codigo.php">
                     <label> Nombre <span>*</span> <br>
                         <input name="nombre" required type="text"></label>
                     <label> Email <span>*</span><br>
@@ -71,18 +85,22 @@
                         <input type="submit" value="Enviar Consulta">
                         <input type="reset" value="Borrar">
                     </div>
-                </form>
+                </form> -->
         </section>
 
-            <aside class="encolumnar">
-        <a href="http://www.instagram.com"><img src="img/instagram-icon.png" alt="instagram"></a>
-        <a href="http://www.x.com"><img src="img/dribbble-icon.png" alt="dribble"> </a> 
-        <a href="http://www.linkedin.com"><img src="img/linkedin-icon.png" alt="linkedIn"> </a>
-        <a href="http://www.facebook.com"><img src="img/facebook-icon.png" alt="facebook"> </a>
-    </aside>
+        <aside class="encolumnar">
+            <a href="http://www.instagram.com"><img src="img/instagram-icon.png" alt="instagram"></a>
+            <a href="http://www.x.com"><img src="img/dribbble-icon.png" alt="dribble"> </a> 
+            <a href="http://www.linkedin.com"><img src="img/linkedin-icon.png" alt="linkedIn"> </a>
+            <a href="http://www.facebook.com"><img src="img/facebook-icon.png" alt="facebook"> </a>
+        </aside>
+
         <footer>
             <!--Probando commits-->
             <p>Este es un pie de página de prueba.</p>
         </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
     </body>
 </html>
