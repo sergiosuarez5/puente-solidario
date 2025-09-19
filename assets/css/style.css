@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+body{
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+/* Estilos para el nav */
+nav {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 15px 30px;
+    background-color: rgb(8, 2, 78); /*Color a modificar*/
+}
+
+.logo {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+.nav a:hover {
+    background-color: aqua;/*Color a modificar*/
+}
+
+.misDonaciones{
+    display: inline-flex;
+    width: 150px;
+    margin: 0 50px;
+    background-color: aquamarine;
+
+}
+
+
+
+
+
+
+
+
+
+
+/*Estilos para quienes somos */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.titulo-quienes-somos {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.quienes-somos {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin: 20px 0;
+}
+
+.quienes-somos img {
+    height: 650px;
+    border-radius: 8px;
+    margin: 10px;
+}
+
+.quienes-somos p {
+    flex: 1;
+    line-height: 1.6;
+}
+/*Estilo para la iamgen del header*/
+header {
+    position: relative;
+    width: 100%;
+    height: 500px; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;   
+    align-items: flex-start; 
+    padding-top: 0px;         
+}
+header div{ 
+    background-image: url(../img/Manos.jpg);
+    background-repeat: no-repeat;
+    height: 300px;
+    width: 100%;
+}
+
+header h3 {
+    text-align: center;
+  color: white;
+  font-size: 2rem;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.7); /* para que se lea sobre la imagen */
+}
