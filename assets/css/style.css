@@ -12,7 +12,7 @@ nav {
     justify-content: space-between; 
     align-items: center;
     padding: 15px 30px;
-    background-color: rgb(8, 2, 78); /*Color a modificar*/
+    background-color: #104486; /*Color a modificar*/
 }
 
 .logo {
@@ -113,4 +113,10 @@ header h3 {
   color: white;
   font-size: 2rem;
   text-shadow: 2px 2px 5px rgba(0,0,0,0.7); /* para que se lea sobre la imagen */
+}
+
+/* FOOTER */
+
+footer {
+    background-color: #104486;
 }

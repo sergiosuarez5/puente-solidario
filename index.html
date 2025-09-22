@@ -6,6 +6,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Fundaciones Donar</title>
         <link rel="stylesheet" href="assets/css/style.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     </head>
     <body>
         <nav class="navbar">
@@ -58,18 +60,18 @@
         <section>
             <h2 id="contacto">Contactanos</h2>
             <div class="mb-3">
-              <label for="exampleFormControlInput1" class="form-label">Nombre</label>
-              <input type="text" class="form-control" id="exampleFormControlInput1" >
+                <label for="exampleFormControlInput1" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" >
             </div> 
 
             <div class="mb-3">
-              <label for="exampleFormControlInput1" class="form-label">Email address</label>
-              <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
             </div>
 
             <div class="mb-3">
-              <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
-              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
             </div>
                 <!-- <form action="php/codigo.php">
                     <label> Nombre <span>*</span> <br>
@@ -88,18 +90,60 @@
                 </form> -->
         </section>
 
-        <aside class="encolumnar">
-            <a href="http://www.instagram.com"><img src="img/instagram-icon.png" alt="instagram"></a>
-            <a href="http://www.x.com"><img src="img/dribbble-icon.png" alt="dribble"> </a> 
-            <a href="http://www.linkedin.com"><img src="img/linkedin-icon.png" alt="linkedIn"> </a>
-            <a href="http://www.facebook.com"><img src="img/facebook-icon.png" alt="facebook"> </a>
-        </aside>
+    <footer class="shadow mt-auto text-white">
+        <div class="container py-5">
+            <div class="row">
+            <div class="col-md-3 mb-4">
+                            <img src="./assets/img/logoheader.png" alt="" width="200">
+<!--                 <h6 class="fw-bold text-uppercase mb-3">Puente solidario</h6>-->                
+                <p class="small text-white">"Solidaridad que une, tecnología que acerca."<!-- <i class="bi bi-suit-heart-fill"></i> --></p>
+            </div>
+            <div class="col-md-3 mb-4">
+                <h6 class="fw-bold text-uppercase mb-3">Secciones</h6>
+                <ul class="list-unstyled small">
+                <li><a href="#" class="text-decoration-none text-white d-block mb-2">Inicio</a></li>
+                <li><a href="#" class="text-decoration-none text-white d-block mb-2">Quienes Somos</a></li>
+                <li><a href="#" class="text-decoration-none text-white d-block mb-2">Donaciones</a></li>
+                <li><a href="#" class="text-decoration-none text-white d-block ">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3 mb-4">
+                <h6 class="fw-bold text-uppercase mb-3">Donaciones</h6>
+                <ul class="list-unstyled small">
+                    <li><a href="#" class="text-decoration-none text-white d-block mb-2">Fundación Alimentos</a></li>
+                    <li><a href="#" class="text-decoration-none text-white d-block mb-2">Fundación Indumentaria</a></li>
+                    <li><a href="#" class="text-decoration-none text-white d-block mb-2">Fundación Estudiantil</a></li>
+                    <li><a href="#" class="text-decoration-none text-white d-block">¡Doná acá!</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3 mb-4">
+                <h6 class="fw-bold text-uppercase mb-3">Contacto</h6>
+                <ul class="list-unstyled small text-white">
+                    <li class="mb-2"><i class="bi bi-geo-alt-fill"></i> Buenos Aires, Argentina</li>
+                    <li class="mb-2"><i class="bi bi-envelope-fill me-2"></i>puentesolidario@donaciones.com</li>
+                    <li class="mb-2"><i class="bi bi-telephone-fill"></i>+1162859445</li>
+                    <li ><i class="bi bi-instagram"></i></i> puentesolidario</li>
+                </ul>
+            </div>
+            </div>
 
-        <footer>
-            <!--Probando commits-->
-            <p>Este es un pie de página de prueba.</p>
-        </footer>
+            <hr class="border-secondary-subtle">
 
+                <div class="text-center">
+                <p class="small text-white mb-1">
+                    Copyright &copy; 2025  <a href="#" class="text-decoration-none text-white">Puente Solidario</a>
+                </p>
+                <div class="d-flex justify-content-center gap-3">
+                    <a href="#" class="text-white"><i class="bi bi-facebook"></i></a>
+                    <a href="#" class="text-white"><i class="bi bi-twitter"></i></a>
+                    <a href="#" class="text-white"><i class="bi bi-linkedin"></i></a>
+                    <a href="#" class="text-white"><i class="bi bi-youtube"></i></a>
+                </div>
+            </div>
 
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     </body>
 </html>
