@@ -8,6 +8,7 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
         <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="icon" type="" href="assets/img/logochico.png">
     </head>
     <body id="inicio">
 
@@ -49,29 +50,54 @@
         </nav>
 
 
-        <header>
-            <div>
-                <h3>¡Donar arregla vidas!</h3>
-                <button> 
+        <div id="carouselExampleCaptions" class="carousel slide">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="assets/img/img1.png" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+<!--                 <h5>First slide label</h5>
+                <p>Some representative placeholder content for the first slide.</p>-->            </div>
             </div>
-            
-        </header>
+            <div class="carousel-item">
+                <img src="assets/img/img2.png" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+<!--                 <h5>Second slide label</h5>
+                <p>Some representative placeholder content for the second slide.</p>-->            </div>
+            </div>
+            <div class="carousel-item">
+                <img src="assets/img/img4.png" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+<!--                 <h5>Third slide label</h5>
+                <p>Some representative placeholder content for the third slide.</p>-->            
+            </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+        </div>
 
         </section>
 
         <section >
-            <h2 id="donaciones">Fundaciones</h2>
+            <h2 class="text-center" id="donaciones">Fundaciones</h2>
             <main>
-                <div class="misDonaciones">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure, officiis sit. Modi sit molestiae consequuntur nemo nesciunt! Possimus sint earum, ducimus architecto hic quod officiis nemo. Quidem odit veniam itaque!</div>
-                <div class="misDonaciones">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure, officiis sit. Modi sit molestiae consequuntur nemo nesciunt! Possimus sint earum, ducimus architecto hic quod officiis nemo. Quidem odit veniam itaque!</div>
-                <div class="misDonaciones">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure, officiis sit. Modi sit molestiae consequuntur nemo nesciunt! Possimus sint earum, ducimus architecto hic quod officiis nemo. Quidem odit veniam itaque!</div>
-                <div class="misDonaciones">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure, officiis sit. Modi sit molestiae consequuntur nemo nesciunt! Possimus sint earum, ducimus architecto hic quod officiis nemo. Quidem odit veniam itaque!</div>
             </main>
-            
         </section>
 
         <section class="container">
             <h2 id="titulo-quienes-somos">¿Quienes somos?</h2>
+            <img src="assets/img/fotosergio.png" class="rounded-circle" alt="..." width="150">
             <div class="quienes-somos">
                 <img src="https://imgs.search.brave.com/ntZ6M04dYiCNvuuI0VkGRLvvvYKj4gs3AjUs7iKqPd4/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTQ1/Njc3NzMzMC9lcy9m/b3RvL3ZlcnRpY2Fs/LWxvcy1qJUMzJUIz/dmVuZXMtYWJyYXph/bi1taXJhbmRvLWEt/bGEtYyVDMyVBMW1h/cmEtYWZ1ZXJhLWFt/aWdvcy1zb25yaWVu/dGVzLWRlLWxhLWdl/bmVyYWNpJUMzJUIz/bi5qcGc_cz02MTJ4/NjEyJnc9MCZrPTIw/JmM9Tkh5NFFZcWVs/cG91TGIyeW55T0t0/Q1dYZUtVNG1TYlR2/VmppQjFwX3d6WT0" alt="Quienes somos" width="300">
                 
@@ -94,21 +120,6 @@
                 <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
                 <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
             </div>
-                <!-- <form action="php/codigo.php">
-                    <label> Nombre <span>*</span> <br>
-                        <input name="nombre" required type="text"></label>
-                    <label> Email <span>*</span><br>
-                        <input name="email" required type="email"></label>
-                    <label for="">
-                        Mensaje <span>*</span> <br>
-                        <textarea required name="comentarios" cols="30" rows="10"></textarea>
-                    </label>
-
-                    <div class="boton encolumnar ">
-                        <input type="submit" value="Enviar Consulta">
-                        <input type="reset" value="Borrar">
-                    </div>
-                </form> -->
         </section>
 
     <footer class="shadow mt-auto text-white">
