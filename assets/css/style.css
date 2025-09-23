@@ -147,7 +147,10 @@ header h3 {
 }
 
 /* FOOTER */
-
-footer, nav {
+footer, nav, .quienes-somos{
     background-color: #104486;
+}
+
+footer li:hover{
+    text-decoration: underline;
 }
