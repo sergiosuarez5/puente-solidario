@@ -5,21 +5,45 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Fundaciones Donar</title>
-        <link rel="stylesheet" href="assets/css/style.css">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+        <link rel="stylesheet" href="assets/css/style.css">
     </head>
-    <body>
-        <nav class="navbar">
-            <img src="./assets/img/logoheader.png" alt="" width="150">
-<!--             <h1 class="logo">Proyecto donar</h1>-->            
-            <ul class="nav">
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#titulo-quienes-somos">Quienes Somos</a></li>
-                <li><a href="#donaciones">Donaciones</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
+    <body id="inicio">
+
+        <nav class="navbar navbar-dark navbar-expand-lg px-3 fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="./assets/img/logoheader.png" alt="Logo" width="150">
+                </a>
+
+                <button class="navbar-toggler border border-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-lg-end justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav gap-3">
+                        <li class="nav-item">
+                            <a class="nav-link active text-white rounded-3 px-3 py-2" aria-current="page" href="#inicio">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white rounded-3 px-3 py-2" href="#donaciones">Donaciones</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white rounded-3 px-3 py-2" href="#titulo-quienes-somos">Quiénes Somos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white rounded-3 px-3 py-2" href="#contacto">Contacto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link rounded-3 px-3 py-2 bg-white btn-donar" href="#donar">Donar</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
+
 
         <header>
             <div>
@@ -45,15 +69,8 @@
         <section class="container">
             <h2 id="titulo-quienes-somos">¿Quienes somos?</h2>
             <div class="quienes-somos">
-                <img src="https://imgs.search.brave.com/ntZ6M04dYiCNvuuI0VkGRLvvvYKj4gs3AjUs7iKqPd4/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTQ1/Njc3NzMzMC9lcy9m/b3RvL3ZlcnRpY2Fs/LWxvcy1qJUMzJUIz/dmVuZXMtYWJyYXph/bi1taXJhbmRvLWEt/bGEtYyVDMyVBMW1h/cmEtYWZ1ZXJhLWFt/aWdvcy1zb25yaWVu/dGVzLWRlLWxhLWdl/bmVyYWNpJUMzJUIz/bi5qcGc_cz02MTJ4/NjEyJnc9MCZrPTIw/JmM9Tkh5NFFZcWVs/cG91TGIyeW55T0t0/Q1dYZUtVNG1TYlR2/VmppQjFwX3d6WT0" alt="Quienes somos">
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed maiores beatae soluta, similique quis dolorem itaque nobis consectetur! Velit inventore corrupti rerum iure ab possimus, nobis magnam laboriosam iste officia. Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit ut provident placeat quasi. Sapiente aperiam vitae cum, id nesciunt natus aspernatur earum quod ducimus sed? Tempora eum nam error non.
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas fugit est eum laboriosam repellat perferendis illo, incidunt excepturi fugiat neque labore officiis sunt nemo tempore cum eveniet, aspernatur vel accusamus!<br><br>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam unde hic incidunt veritatis recusandae, laudantium magni, pariatur sed dolor delectus sunt est quam commodi libero adipisci esse eum, nisi earum.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo nisi voluptas nesciunt ipsa officia et, quas deserunt sunt quis laudantium in saepe, adipisci similique ipsam voluptate dolore eligendi. Repellat, dignissimos.<br><br>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore modi earum qui odio, voluptatibus laborum corporis quisquam beatae eos nesciunt sit? Tenetur ea dolores quis rerum cumque neque dolore sit.
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa dolorum, fugit sit quisquam atque magni voluptas, officia vel nulla omnis deleniti ipsum molestiae aspernatur quos asperiores perferendis ab mollitia dolores.
-                </p>
+                <img src="https://imgs.search.brave.com/ntZ6M04dYiCNvuuI0VkGRLvvvYKj4gs3AjUs7iKqPd4/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTQ1/Njc3NzMzMC9lcy9m/b3RvL3ZlcnRpY2Fs/LWxvcy1qJUMzJUIz/dmVuZXMtYWJyYXph/bi1taXJhbmRvLWEt/bGEtYyVDMyVBMW1h/cmEtYWZ1ZXJhLWFt/aWdvcy1zb25yaWVu/dGVzLWRlLWxhLWdl/bmVyYWNpJUMzJUIz/bi5qcGc_cz02MTJ4/NjEyJnc9MCZrPTIw/JmM9Tkh5NFFZcWVs/cG91TGIyeW55T0t0/Q1dYZUtVNG1TYlR2/VmppQjFwX3d6WT0" alt="Quienes somos" width="300">
+                
             </div>
         </section>
         

@@ -1,47 +1,36 @@
-
-
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 body{
     font-family: "Roboto", sans-serif;
     margin: 0;
     padding: 0;
 }
+
 /* Estilos para el nav */
-nav {
-    display: flex;
-    justify-content: space-between; 
-    align-items: center;
-    padding: 15px 30px;
-    background-color: #104486; /*Color a modificar*/
+.nav-link {
+    transition: transform 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
+    border: 1px solid transparent;
 }
 
-.logo {
-    color: #fff;
-    font-size: 1.5rem;
+.nav-link:hover {
+    border-color: rgb(255, 255, 255);
+    color: #104486;
+}
+
+@media (min-width: 992px) {
+    .nav-link:hover {
+        transform: scale(1.1);
+    }
+}
+
+@media (max-width: 991px) {
+    .navbar-nav {
+        align-items: center;
+    }
+}
+.btn-donar {
+    color: #104486;
     font-weight: bold;
-}
-
-.nav {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-
-.nav a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 1rem;
-    transition: color 0.3s;
-}
-.nav a:hover {
-    background-color: aqua;/*Color a modificar*/
-}
-.navbar {
-  position: fixed; /* La barra se fija en la ventana gráfica */
-  top: 0;          /* La barra se fija en la parte superior */
-  width: 100%;     /* Asegura que la barra ocupe todo el ancho */
-  padding: 10px 0;
-  z-index: 1000;   /* Asegura que la barra esté por encima de otros elementos */
 }
 
 .misDonaciones{
@@ -117,6 +106,6 @@ header h3 {
 
 /* FOOTER */
 
-footer {
+footer, nav {
     background-color: #104486;
 }
