@@ -42,30 +42,10 @@ body{
 }
 
 
-
-/*Estilos para quienes somos */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-.titulo-quienes-somos {
-    font-size: 2rem;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.quienes-somos {
-    display: flex;
+/*QUIENES SOMOS GRUPAL*/
+.quienes_somos {
     align-items: center;
-    gap: 30px;
-    margin: 20px 0;
-}
-
-.quienes-somos img {
-    height: 650px;
-    border-radius: 8px;
-    margin: 10px;
+    text-align: center;
 }
 
 /* Botón scroll */
