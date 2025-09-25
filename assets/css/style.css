@@ -127,10 +127,13 @@ header h3 {
 }
 
 /* FOOTER */
-footer, nav, .quienes-somos{
+footer, nav, .quienes-somos, .boton-enviar{
     background-color: #104486;
 }
-
+.boton-enviar:hover{
+    color: #104486 !important;
+    background-color: #94DDDE;
+}
 footer li:hover{
     text-decoration: underline;
 }
