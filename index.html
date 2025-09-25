@@ -12,17 +12,16 @@
     </head>
     <body id="inicio">
 
-        <nav class="navbar navbar-dark navbar-expand-lg px-3 fixed-top">
+        <nav class="navbar navbar-dark navbar-expand-lg px-3">
             <div class="container-fluid">
                 <a class="navbar-brand" href="index.html">
-                    <img src="./assets/img/logoheader.png" alt="Logo" width="200">
+                    <img src="./assets/img/logoheader.png" alt="Logo" width="180">
                 </a>
 
                 <button class="navbar-toggler border border-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-
                 <div class="collapse navbar-collapse justify-content-lg-end justify-content-center" id="navbarNav">
                     <ul class="navbar-nav gap-3">
                         <li class="nav-item">
@@ -50,41 +49,18 @@
         </nav>
 
 
-        <div id="carouselExampleCaptions" class="carousel slide">
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="assets/img/img1.png" class="d-block w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-    <!--                 <h5>First slide label</h5>
-                <p>Some representative placeholder content for the first slide.</p>-->            </div>
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                        <img src="assets/img/img1.png" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/img/img2.png" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/img/img3.png" class="d-block w-100" alt="...">
+                </div>
             </div>
-            <div class="carousel-item">
-                <img src="assets/img/img2.png" class="d-block w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-    <!--                 <h5>Second slide label</h5>
-                <p>Some representative placeholder content for the second slide.</p>-->            </div>
-            </div>
-            <div class="carousel-item">
-                <img src="assets/img/img4.png" class="d-block w-100" alt="...">
-            <div class="carousel-caption d-none d-md-block">
-    <!--                 <h5>Third slide label</h5>
-                <p>Some representative placeholder content for the third slide.</p>-->            
-            </div>
-            </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
         </div>
 
 
@@ -154,38 +130,60 @@
             </div>
         </section>
 
-            <section class="quienes_somos">
-                <h3>¿QUIENES SOMOS?</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim error saepe animi iure amet, excepturi eveniet doloribus doloremque nobis vero nihil eius architecto asperiores ex ducimus perferendis sed eligendi nemo voluptas magni reiciendis quasi accusamus quae nesciunt? Optio voluptatum quo delectus alias nesciunt deleniti, enim ut animi hic obcaecati recusandae!</p>
-                        <a href="https://www.linkedin.com/in/eymicastillo/" target="_blank"><img src="assets/img/eymi.png" class="rounded-circle" alt="..." width="180"></a>
-                        <a href="https://www.linkedin.com/in/julieta-bellido/" target="_blank"><img src="assets/img/juli.png" class="rounded-circle" alt="..." width="180"></a>
-                        <a href="https://www.linkedin.com/in/mayra-limachi/" target="_blank"><img src="assets/img/mayra.png" class="rounded-circle" alt="..." width="180"></a>
-                        <a href="https://www.linkedin.com/in/lucio-lipari/" target="_blank"><img src="assets/img/lucio.png" class="rounded-circle" alt="..." width="180"></a>
-                        <a href="https://www.linkedin.com/in/sergio-suarezp/" target="_blank"><img src="assets/img/fotosergi.png" class="rounded-circle" alt="Sergio Suarez" width="180"></a>
-            </section>
-            <!--
-        <section>
-            <h2 id="contacto">Contactanos</h2>
-            <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">Nombre</label>
-                <input type="text" class="form-control" id="exampleFormControlInput1" >
-            </div> 
 
-            <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">Email address</label>
-                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+        <section class="quienes_somos quienes_somos_bg my-5">
+            <h3 class="text-center mb-4">¿QUIENES SOMOS?</h3>
+            <p class="text-center mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim error saepe animi iure amet, excepturi eveniet doloribus doloremque nobis vero nihil eius architecto asperiores ex ducimus perferendis sed eligendi nemo voluptas magni reiciendis quasi accusamus quae nesciunt? Optio voluptatum quo delectus alias nesciunt deleniti, enim ut animi hic obcaecati recusandae!</p>
+
+            <div class="row text-center">
+                <div class="col-md-2 member-card offset-md-1 mb-4">
+                    <a href="https://www.linkedin.com/in/eymicastillo/" target="_blank">
+                        <img src="assets/img/eymi.png" class="rounded-circle img-fluid mb-2" alt="Eymi Castillo">
+                    </a>
+                    <h5>Eymi Castillo</h5>
+                    <p class="text-muted">Project Manager</p>
+                </div>
+
+                <div class="col-md-2 member-card mb-4">
+                    <a href="https://www.linkedin.com/in/julieta-bellido/" target="_blank">
+                        <img src="assets/img/juli.png" class="rounded-circle img-fluid mb-2" alt="Julieta Bellido">
+                    </a>
+                    <h5>Julieta Bellido</h5>
+                    <p class="text-muted">Tester QA</p>
+                </div>
+
+                <div class="col-md-2 member-card mb-4">
+                    <a href="https://www.linkedin.com/in/mayra-limachi/" target="_blank">
+                        <img src="assets/img/mayra.png" class="rounded-circle img-fluid mb-2" alt="Mayra Limachi">
+                    </a>
+                    <h5>Mayra Limachi</h5>
+                    <p class="text-muted">Desarrollador Web</p>
+                </div>
+
+                <div class="col-md-2 member-card mb-4">
+                    <a href="https://www.linkedin.com/in/lucio-lipari/" target="_blank">
+                        <img src="assets/img/lucio.png" class="rounded-circle img-fluid mb-2" alt="Lucio Lipari">
+                    </a>
+                    <h5>Lucio Lipari</h5>
+                    <p class="text-muted">Desarrollador Web</p>
+                </div>
+
+                <div class="col-md-2 member-card mb-4">
+                    <a href="https://www.linkedin.com/in/sergio-suarezp/" target="_blank">
+                        <img src="assets/img/fotosergi.png" class="rounded-circle img-fluid mb-2" alt="Sergio Suarez">
+                    </a>
+                    <h5>Sergio Suarez</h5>
+                    <p class="text-muted">Diseñador UI|UX & Desarrollador</p>
+                    <div class="collapse pt-3" id="sergio_bio">
+                    </div>
+                </div>
             </div>
+        </section>
 
-            <div class="mb-3">
-                <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-            </div>
-        </section>-->
-
-        <section class="container my-5">
+        <section class="container my-5" id="contacto">
             <div class="card shadow-lg">
                 <div class="card-body p-4">
-                <h2 id="contacto" class="mb-4 text-center">Inscripción de Fundaciones</h2>
+                <h2 class="mb-4 text-center">Inscripción de Fundaciones</h2>
                 
                 <form>
                     <div class="mb-3">
@@ -267,6 +265,8 @@
     </footer>
     <a class="floating-btn donate-btn" href="#donar" aria-label="Donar" title="Donar"><img src="assets/img/logochico.png" alt="Logo chico" width="30">
     <a class="scroll-top" href="#inicio" aria-label="Ir arriba" title="Ir arriba">▲</a>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     </body>
 </html>
