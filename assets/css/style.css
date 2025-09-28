@@ -6,6 +6,9 @@ body{
     padding: 0;
 }
 
+*{
+    box-sizing: border-box;
+}
 /* Estilos para el nav */
 .nav-link {
     transition: transform 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
@@ -17,17 +20,14 @@ body{
     color: #104486;
 }
 
-@media (min-width: 992px) {
-    .nav-link:hover {
-        transform: scale(1.1);
-    }
-}
 
 @media (max-width: 991px) {
     .navbar-nav {
         align-items: center;
     }
 }
+
+/* CARROUSEL */
 
 /* Estilos para los botones */
 .btn-donar {
@@ -44,6 +44,7 @@ body{
 }
 
 /* FUNDACIONES */
+
 .card{
     border-radius: 10px; 
     transition: all 0.3s ease-in-out; 
@@ -59,12 +60,14 @@ body{
 
 /*QUIENES SOMOS GRUPAL*/
 .quienes_somos_bg {
-    padding: 20px 0; /* Espaciado interno */
+    padding: 60px 0; /* Espaciado interno */
 }
 
 /* Separacion de cada card */
-.quienes_somos .row .col-md-2{
-    padding: 50px 0;
+.quienes_somos .row {
+    padding: auto;
+    margin: auto;
+    width: 100%;
 }
 
 /* Efecto hover para las tarjetas de los miembros */
@@ -137,13 +140,26 @@ body{
 
 
 /* FOOTER */
-footer, nav, .quienes-somos, .boton-enviar{
+footer, nav, .quienes-somos{
     background-color: #104486;
 }
+.boton-enviar
 .boton-enviar:hover{
     color: #104486 !important;
     background-color: #94DDDE;
 }
 footer li:hover{
     text-decoration: underline;
+}
+
+@media (min-width: 992px) {
+    .nav-link:hover {
+        transform: scale(1.1);
+    }
+}
+
+@media (max-width: 991px) {
+    .navbar-nav {
+        align-items: center;
+    }
 }
