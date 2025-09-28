@@ -29,8 +29,6 @@ body{
     }
 }
 
-/* CARROUSEL */
-
 /* Estilos para los botones */
 .btn-donar {
     color: #104486;
@@ -46,7 +44,6 @@ body{
 }
 
 /* FUNDACIONES */
-
 .card{
     border-radius: 10px; 
     transition: all 0.3s ease-in-out; 
@@ -62,7 +59,7 @@ body{
 
 /*QUIENES SOMOS GRUPAL*/
 .quienes_somos_bg {
-    padding: 60px 0; /* Espaciado interno */
+    padding: 20px 0; /* Espaciado interno */
 }
 
 /* Separacion de cada card */
