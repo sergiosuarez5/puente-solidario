@@ -20,19 +20,10 @@ body{
     color: #104486;
 }
 
-
-@media (max-width: 991px) {
-    .navbar-nav {
-        align-items: center;
-    }
-}
-
-/* CARROUSEL */
-
 /* Estilos para los botones */
 .btn-donar {
     color: #104486;
-    font-weight: bold;
+    font-weight: bold;  
 }
 
 .misDonaciones{
@@ -44,6 +35,10 @@ body{
 }
 
 /* FUNDACIONES */
+.img-fundaciones {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
 
 .card{
     border-radius: 10px; 
@@ -53,14 +48,44 @@ body{
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08); 
 }
 
-.card:hover{
+.boton-enviar{
+    border-radius: 10px; 
+    width: 20%;
+    padding: 10px;
+    display: block; 
+    margin: 0 auto;
+    transition: all 0.3s ease-in-out; 
+    background-color: #fff; 
+    color: #104486 !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08); 
+    font-weight: bold;
+}
+
+.boton-enviar:hover{
+    transform: translateY(-5px) scale(1.02);
+    background-color: #94DDDE;
+    color: #104486 !important;
+    font-weight: bold;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.h-100{
+    border-radius: 10px; 
+    transition: all 0.3s ease-in-out; 
+    background-color: #104486; 
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08); 
+}
+
+.h-100:hover{
     transform: translateY(-5px) scale(1.02);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 /*QUIENES SOMOS GRUPAL*/
 .quienes_somos_bg {
-    padding: 60px 0; /* Espaciado interno */
+    padding: 20px 0; 
+    padding: 60px 0; 
 }
 
 /* Separacion de cada card */
@@ -70,12 +95,30 @@ body{
     width: 100%;
 }
 
+.quienes-somos-texto {
+    text-align: center;
+    padding: 30px;
+    font-size: 1.15rem; 
+    line-height: 1.1; 
+    color: #333; 
+}
+
+.quienes-somos-texto strong {
+    font-weight: 700; 
+    color: #104486; 
+}
+
+.quienes-somos-texto em {
+    font-style: italic;
+    color: #000; 
+}
+
 /* Efecto hover para las tarjetas de los miembros */
 .member-card {
-    border-radius: 10px; /* Borde ligeramente redondeado por defecto */
-    transition: all 0.3s ease-in-out; /* Suaviza todas las transiciones */
-    background-color: #ffffff; /* Fondo blanco para la tarjeta */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08); /* Sombra base suave */
+    border-radius: 10px; 
+    transition: all 0.3s ease-in-out; 
+    background-color: #ffffff; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08); 
 }
 
 .member-card:hover {
@@ -131,11 +174,6 @@ body{
 .donate-btn:hover {
     transform: translateY(-3px);
     opacity: 1;
-}
-
-.quienes-somos p {
-    flex: 1;
-    line-height: 1.6;
 }
 
 
