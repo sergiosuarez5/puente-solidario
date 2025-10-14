@@ -187,18 +187,21 @@
                 </div>
             </div>
         </section><!--
-        
-        
+
 <!-- formulario incripciones -->
         <section class="container my-5" id="contacto">
             <div class="card shadow-lg">
                 <div class="card-body p-4">
                 <h2 class="mb-4 text-center">Inscripción de Fundaciones</h2>
                 
-                <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DgL00000CRFIc" method="POST">
+                <form id="webToLeadForm"
+                    action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DgL00000CRFIc"
+                    method="POST"
+                    onsubmit="alert('¡Gracias por inscribirte! Tu información fue enviada correctamente.')">
                     <input type="hidden" name="oid" value="00DgL00000CRFIc">
                     <input type="hidden" name="last_name" value="-">
                     <input type="hidden" name="company" value="Fundación">
+                    <input type="hidden" name="retURL" value="https://sergiosuarez5.github.io/puente-solidario/index.html">
 
                     <div class="mb-3">
                         <label for="first_name">Nombre de la Fundación</label>
@@ -222,7 +225,6 @@
             </div>
         </div>
     </section>
-
 <!-- inicia footer -->
     <footer class="shadow mt-auto text-white">
         <div class="container py-5">
@@ -273,6 +275,10 @@
             </div>
         </div>
     </footer>
+        
+
+
+
     <!-- boton scroll top & de donar -->
     <a class="floating-btn donate-btn" href="#contacto" aria-label="Donar" title="Donar"><img src="assets/img/logochico.png" alt="Logo chico" width="30">
     <a class="scroll-top" href="#inicio" aria-label="Ir arriba" title="Ir arriba">▲</a>
