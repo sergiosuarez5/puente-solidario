@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Fundaciones Donar</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+        <link rel="stylesheet" href="../assets/css/style.css">
+        <link rel="icon" type="" href="../assets/img/logochico.png">
+    </head>
+    <body id="inicio">
+
+<!-- nav barra menu -->
+        <nav class="navbar navbar-dark navbar-expand-lg px-3">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/index.html">
+                    <img src="../assets/img/logoheader.png" alt="Logo" width="180">
+                </a>
+                <button class="navbar-toggler border border-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-lg-end justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav gap-3">
+                        <li class="nav-item">
+                            <a class="nav-link active text-white rounded-4 px-3 py-2" aria-current="page" href="#inicio">INICIO</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white rounded-4 px-3 py-2" href="#donaciones">DONACIONES</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white rounded-4 px-3 py-2" href="#titulo-quienes-somos">QUIÉNES SOMOS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white rounded-4 px-3 py-2" href="#contacto">CONTACTO</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link rounded-4 px-3 py-2 bg-white btn-donar" href="#donar">DONAR</a>
+                        </li>
+                        <form class="d-flex" role="search">
+                            <input class="form-control me-2 rounded-4" type="search" placeholder="Buscar" aria-label="Search"/>
+                            <button class="btn btn-outline-primary" type="submit"><i class="bi bi-search text-white"></i></button>
+                        </form>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    <section class="container my-5" id="contacto">
+    <div class="row justify-content-center"> 
+        
+        <div class="col-12 col-md-8 col-lg-6"> 
+            
+            <div class="card shadow-lg">
+                <div class="card-body p-4">
+                    <h2 class="mb-4 text-center">Inscripción de Donadores</h2>
+                    
+                    <form id="webToLeadForm"
+                        action=""
+                        method="POST"
+                        onsubmit="alert('¡Gracias por tu aporte! Tu información fue enviada correctamente a Puente Solidario.')">
+                        
+                        <input type="hidden" name="oid" value="00Dg5000000o86B">
+                        <input type="hidden" name="last_name" value="-">
+                        <input type="hidden" name="company" value="Fundación">
+                        <input type="hidden" name="retURL" value="https://sergiosuarez5.github.io/puente-solidario/index.html">
+
+                        <div class="mb-3">
+                            <label for="first_name">Nombre completo</label>
+                            <input id="first_name" class="form-control" name="first_name" type="text" placeholder="Ej: Facundo Gómez">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="email">Correo electrónico</label>
+                            <input id="email" class="form-control" name="email" type="email" placeholder="nombre@email.com">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="phone">Teléfono</label>
+                            <input id="phone" class="form-control" name="phone" type="tel" placeholder="Ej: 01123456789">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="00Ng5000002EuFX" class="form-label">Fundación</label>
+                            <select  id="00Ng5000002EuFX" name="00Ng5000002EuFX" title="Localidad" required class="form-select">
+                                <option value="">--None--</option>
+                                <option value="Esperanza">Fundación Esperanza</option>
+                                <option value="Vida">Fundación Vida</option>
+                                <option value="Futuro">Fundación Futuro</option>
+                                <option value="Luz">Fundación Luz</option>
+                                <option value="Semillas">Fundación Semillas</option>
+                                <option value="Hogar">Fundación Hogar</option>
+                            </select>
+                        </div>
+                        <div class="mb-4">
+                        <label class="form-label d-block">Seleccione el Método de Pago:</label>
+                        
+                        <div class="d-flex flex-wrap gap-3">
+                            
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" value="Transferencia Bancaria" id="pagoTransferencia" name="metodo_pago_unico">
+                                <label class="form-check-label" for="pagoTransferencia">
+                                    <i class="bi bi-bank me-1 text-primary"></i> Transferencia Bancaria
+                                </label>
+                            </div>
+
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" value="Tarjeta de Crédito / Débito" id="pagoTarjeta" name="metodo_pago_unico">
+                                <label class="form-check-label" for="pagoTarjeta">
+                                    <i class="bi bi-credit-card me-1 text-primary"></i> Tarjeta (Crédito/Débito)
+                                </label>
+                            </div>
+
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" value="Mercado Pago" id="pagoMercadoPago" name="metodo_pago_unico">
+                                <label class="form-check-label" for="pagoMercadoPago">
+                                    <i class="bi bi-wallet me-1 text-info"></i> Mercado Pago
+                                </label>
+                            </div>
+
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" value="PayPal" id="pagoPayPal" name="metodo_pago_unico">
+                                <label class="form-check-label" for="pagoPayPal">
+                                    <i class="bi bi-paypal me-1 text-primary"></i> PayPal
+                                </label>
+                            </div>
+
+                        </div>
+                    </div>                        
+                    <div class="mb-3">
+                        <label for="cantidadPagar" class="form-label">Cantidad a Pagar (o Cuota)</label>
+                        <input type="number" id="cantidadPagar" class="form-control" name="cantidad_inscripcion" min="1" step="0.01" placeholder="Ej: 500.00" required>
+                        <div class="form-text text-white">Monto de la cuota.</div>
+                    </div>
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-primary">DONAR</button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+            
+        </div>
+    </div> 
+    </section>
+    <!-- inicia footer -->
+    <footer class="shadow mt-auto text-white">
+        <div class="container py-5">
+            <div class="row">
+            <div class="col-md-3 mb-4">
+                            <img src="../assets/img/logoheader.png" alt="" width="200">
+                <p class="small text-white">"Solidaridad que une, tecnología que acerca."</p>
+            </div>
+            <div class="col-md-3 mb-4">
+                <h6 class="fw-bold text-uppercase mb-3">Secciones</h6>
+                <ul class="list-unstyled small">
+                <li><a href="#" class="text-decoration-none text-white d-block mb-2">Inicio</a></li>
+                <li><a href="#" class="text-decoration-none text-white d-block mb-2">Quienes Somos</a></li>
+                <li><a href="#" class="text-decoration-none text-white d-block mb-2">Donaciones</a></li>
+                <li><a href="#" class="text-decoration-none text-white d-block ">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3 mb-4">
+                <h6 class="fw-bold text-uppercase mb-3">Donaciones</h6>
+                <ul class="list-unstyled small">
+                    <li><a href="#" class="text-decoration-none text-white d-block mb-2">Fundación Alimentos</a></li>
+                    <li><a href="#" class="text-decoration-none text-white d-block mb-2">Fundación Indumentaria</a></li>
+                    <li><a href="#" class="text-decoration-none text-white d-block mb-2">Fundación Estudiantil</a></li>
+                    <li><a href="#" class="text-decoration-none text-white d-block">¡Doná acá!</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3 mb-4">
+                <h6 class="fw-bold text-uppercase mb-3">Contacto</h6>
+                <ul class="list-unstyled small text-white">
+                    <li class="mb-2"><i class="bi bi-geo-alt-fill"></i> Buenos Aires, Argentina</li>
+                    <li class="mb-2"><i class="bi bi-envelope-fill"></i> puentesolidario@donaciones.com</li>
+                    <li class="mb-2"><i class="bi bi-telephone-fill"></i> +1162859445</li>
+                    <li ><i class="bi bi-instagram"></i></i> puentesolidario</li>
+                </ul>
+            </div>
+            </div>
+            <hr class="border-secondary-subtle">
+                <div class="text-center">
+                <p class="small text-white mb-1">
+                    Copyright &copy; 2025  <a href="#" class="text-decoration-none text-white">Puente Solidario</a>
+                </p>
+                <div class="d-flex justify-content-center gap-3">
+                    <a href="#" class="text-white"><i class="bi bi-facebook"></i></a>
+                    <a href="#" class="text-white"><i class="bi bi-twitter"></i></a>
+                    <a href="#" class="text-white"><i class="bi bi-linkedin"></i></a>
+                    <a href="#" class="text-white"><i class="bi bi-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+        
+
+    <!-- boton scroll top & de donar -->
+    <a class="floating-btn donate-btn" href="#contacto" aria-label="Donar" title="Donar"><img src="../assets/img/logochico.png" alt="Logo chico" width="30">
+    <a class="scroll-top" href="#inicio" aria-label="Ir arriba" title="Ir arriba">▲</a>
+    <script src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    </body>
+</html>

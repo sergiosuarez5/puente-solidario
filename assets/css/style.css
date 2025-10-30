@@ -48,6 +48,7 @@ body{
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08); 
 }
 
+
 .boton-enviar{
     border-radius: 10px; 
     width: 60%;
@@ -95,6 +96,11 @@ body{
     width: 100%;
 }
 
+/* btn donar */
+.btn-donar1{
+    color: #fff;
+    text-decoration: none;
+}
 .quienes-somos-texto {
     text-align: center;
     padding: 30px;
