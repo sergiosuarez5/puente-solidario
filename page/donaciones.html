@@ -25,13 +25,13 @@
                 <div class="collapse navbar-collapse justify-content-lg-end justify-content-center" id="navbarNav">
                     <ul class="navbar-nav gap-3">
                         <li class="nav-item">
-                            <a class="nav-link active text-white rounded-4 px-3 py-2" aria-current="page" href="#inicio">INICIO</a>
+                            <a class="nav-link active text-white rounded-4 px-3 py-2" aria-current="page" href="/index.html">INICIO</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white rounded-4 px-3 py-2" href="#donaciones">DONACIONES</a>
+                            <a class="nav-link text-white rounded-4 px-3 py-2" href="/index.html">FUNDACIONES</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white rounded-4 px-3 py-2" href="#titulo-quienes-somos">QUIÉNES SOMOS</a>
+                            <a class="nav-link text-white rounded-4 px-3 py-2" href="/index.html">QUIÉNES SOMOS</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-white rounded-4 px-3 py-2" href="#contacto">CONTACTO</a>
@@ -48,16 +48,21 @@
             </div>
         </nav>
 
-    <section class="container my-5" id="contacto">
+    <section class="container my-5" id="donar">
     <div class="row justify-content-center"> 
-        
+                        <h2 class="tittle-fundacion text-center">¿QUERÉS DONAR A LAS FUNDACIONES?</h2>
+                <p class="p-fundacion text-center">Hacé tu donación de forma rápida y segura. Nos encargamos de ser el <STRong>PUENTE</STRong> confiable garantizando que tu ayuda llegue al instante a la fundación que elijas.</p>
+
         <div class="col-12 col-md-8 col-lg-6"> 
             
             <div class="card shadow-lg">
                 <div class="card-body p-4">
-                    <h2 class="mb-4 text-center">Inscripción de Donadores</h2>
-                    
-                    <form id="webToLeadForm"
+                    <h2 class="mb-4 text-center">¡DONÁ AL INSTANTE!</h2>
+<!--                     <p class="p-pasoapaso text-center">Tus datos estan siendo protegidos<i class="bi bi-shield-shaded"></i></p>-->
+                    <p class="subtitulo-seguridad text-center">
+                        Tus datos están protegidos por cifrado de alta seguridad<i class="bi bi-shield-shaded"></i>
+                    </p>
+                        <form id="webToLeadForm"
                         action=""
                         method="POST"
                         onsubmit="alert('¡Gracias por tu aporte! Tu información fue enviada correctamente a Puente Solidario.')">
@@ -132,10 +137,10 @@
                     <div class="mb-3">
                         <label for="cantidadPagar" class="form-label">Cantidad a Pagar (o Cuota)</label>
                         <input type="number" id="cantidadPagar" class="form-control" name="cantidad_inscripcion" min="1" step="0.01" placeholder="Ej: 500.00" required>
-                        <div class="form-text text-white">Monto de la cuota.</div>
+                        <div class="form-text text-white">Verifique el monto antes de enviar.</div>
                     </div>
                         <div class="d-grid">
-                            <button type="submit" class="btn btn-primary">DONAR</button>
+                            <button type="submit" class="btn btn-primary">ENVIAR DONACIÓN</button>
                         </div>
                     </form>
 
@@ -156,10 +161,10 @@
             <div class="col-md-3 mb-4">
                 <h6 class="fw-bold text-uppercase mb-3">Secciones</h6>
                 <ul class="list-unstyled small">
-                <li><a href="#" class="text-decoration-none text-white d-block mb-2">Inicio</a></li>
-                <li><a href="#" class="text-decoration-none text-white d-block mb-2">Quienes Somos</a></li>
-                <li><a href="#" class="text-decoration-none text-white d-block mb-2">Donaciones</a></li>
-                <li><a href="#" class="text-decoration-none text-white d-block ">Contacto</a></li>
+                <li><a href="/index.html" class="text-decoration-none text-white d-block mb-2">Inicio</a></li>
+                <li><a href="/index.html" class="text-decoration-none text-white d-block mb-2">Quienes Somos</a></li>
+                <li><a href="/index.html" class="text-decoration-none text-white d-block mb-2">Donaciones</a></li>
+                <li><a href="/index.html" class="text-decoration-none text-white d-block ">Contacto</a></li>
                 </ul>
             </div>
             <div class="col-md-3 mb-4">
@@ -176,7 +181,7 @@
                 <ul class="list-unstyled small text-white">
                     <li class="mb-2"><i class="bi bi-geo-alt-fill"></i> Buenos Aires, Argentina</li>
                     <li class="mb-2"><i class="bi bi-envelope-fill"></i> puentesolidario@donaciones.com</li>
-                    <li class="mb-2"><i class="bi bi-telephone-fill"></i> +1162859445</li>
+                    <li class="mb-2" id="contacto"><i class="bi bi-telephone-fill"></i> +1162859445</li>
                     <li ><i class="bi bi-instagram"></i></i> puentesolidario</li>
                 </ul>
             </div>

@@ -13,6 +13,7 @@ body{
 .nav-link {
     transition: transform 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
     border: 1px solid transparent;
+    font-size: 1.1em;
 }
 
 .nav-link:hover {
@@ -109,14 +110,49 @@ body{
     color: #333; 
 }
 
-.quienes-somos-texto strong {
-    font-weight: 700; 
-    color: #104486; 
+
+.h1-fundaciones{
+    color:#104486; /* Color azul de confianza */
+    font-weight: 800; /* Super negrita */
+    margin-bottom: 20px;
+    letter-spacing: 0.5px;
+}
+.h2-quienesomos{
+    color: #104486; /* Color azul de confianza */
+    font-weight: 800; /* Super negrita */
+    margin-bottom: 20px;
+    letter-spacing: 0.5px;
 }
 
-.quienes-somos-texto em {
-    font-style: italic;
-    color: #000; 
+.tittle-fundacion{
+    color: #104486; /* Color azul de confianza */
+    font-weight: 800; /* Super negrita */
+    margin-bottom: 20px;
+    letter-spacing: 0.5px;
+}
+
+.subtitulo-seguridad {
+    font-size: 1em; /* Tamaño normal, no muy grande */
+    color: #a0c3e6; /* Un azul claro o gris muy suave para que se vea sutil */
+    margin-bottom: 20px;
+    margin-top: -10px; /* Para acercarlo un poco al título H2 */
+    font-weight: 500;
+}
+
+.subtitulo-seguridad .bi-lock-fill {
+    color: #28a745; /* Color verde para el icono, que significa 'OK' o seguridad */
+    margin-right: 5px;
+}
+
+.p-fundacion{
+    font-size: 1.3em;
+    border-radius: 8px; /* Bordes redondeados */
+    border-bottom: 8px solid #104486; /* Una línea lateral de color para darle énfasis (como un highlight) */
+    max-width: 800px; /* Limita el ancho del párrafo */
+    margin: 0 auto 30px auto; /* Centra el bloque y añade espacio abajo */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para que "flote" */
+    font-weight: 500; /* Peso de fuente medio para legibilidad */
+    padding: 18px;
 }
 
 /* Efecto hover para las tarjetas de los miembros */
