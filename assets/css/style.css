@@ -169,11 +169,21 @@ body{
 }
 
 
-/* Botón scroll */
-.scroll-top {
+/* 🆕 Contenedor para TODOS los botones flotantes */
+#floating-buttons-group {
     position: fixed;
-    right: 1rem;
-    bottom: 1rem;
+    bottom: 1rem; 
+    right: 1rem; 
+    display: flex;
+    flex-direction: column; /* <--- CAMBIAR A 'column' para respetar el orden del HTML (Chatbot primero, arriba) */
+    align-items: flex-end; 
+    gap: 0.8rem; 
+    z-index: 1000; 
+}
+
+
+/* Estilos Comunes para todos los botones del grupo */
+.scroll-top, .donate-btn, #chatbot-toggle-btn {
     width: 48px;
     height: 48px;
     display: inline-grid;
@@ -181,43 +191,282 @@ body{
     background: #104486;
     color: white;
     text-decoration: none;
+    border: none;
     border-radius: 50%;
     box-shadow: 0 6px 18px rgba(0,0,0,0.25);
     transition: transform .15s ease, opacity .15s ease;
     opacity: 0.85;
     font-weight: bold;
     font-size: 20px;
+    /* Eliminar position: fixed, right y bottom de aquí */
 }
 
-.scroll-top:hover {
-    transform: translateY(-3px);
-    opacity: 1;
+/* 3. BOTÓN SCROLL TOP (Se mantiene igual, solo sin position) */
+.scroll-top {
+    background: #104486; /* Azul oscuro */
 }
 
+/* 2. BOTÓN DE DONAR (Se mantiene igual, solo sin position) */
 .donate-btn {
-    position: fixed;
-    right: 1rem;
-    bottom: 4.8rem;    /* más arriba para no chocar con el de "subir" */
-    width: 48px;
-    height: 48px;
-    display: inline-grid;
-    place-items: center;
-    background: #94DDDE; /* color diferente para destacar */
-    color: white;
-    text-decoration: none;
-    border-radius: 50%;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
-    transition: transform .15s ease, opacity .15s ease;
-    opacity: 0.85;
-    font-weight: bold;
-    font-size: 20px;
+    background: #94DDDE; /* Color celeste */
 }
 
-.donate-btn:hover {
+/* 1. BOTÓN CHATBOT (Nuevo estilo para integrarse) */
+#chatbot-toggle-btn {
+    background-color: #fff; /* Azul fuerte para el chat */
+    cursor: pointer;
+    font-size: 24px;
+    z-index: 1001; /* Ligeramente superior a su ventana de chat */
+}
+
+.scroll-top:hover, .donate-btn:hover, #chatbot-toggle-btn:hover {
     transform: translateY(-3px);
     opacity: 1;
 }
 
+/* ---------------------------------------------------- */
+/* 🤖 ESTILOS ESPECÍFICOS DEL CHATBOT Y SU VENTANA       */
+/* ---------------------------------------------------- */
+
+#chatbot-wrapper {
+    position: relative !important; 
+    width: 48px; /* Ancho igual al botón */
+    height: 48px; /* Altura igual al botón */
+}
+
+#chatbot-toggle-btn {
+    position: absolute; /* Posicionado dentro del wrapper */
+    bottom: 0;
+    right: 0;
+}
+
+#chat-window {
+position: absolute !important; 
+    bottom: calc(48px + 0.8rem) !important;
+    right: 0 !important; 
+    
+    width: 300px !important;
+    height: auto !important; /* Permitirá que la ventana se ajuste al contenido si agregamos más tarde */
+    max-height: 400px !important; /* Limita la altura máxima */
+    
+    background-color: white !important;
+    border-radius: 10px !important;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3) !important;
+    z-index: 9999 !important; 
+    
+    display: flex !important;
+    flex-direction: column !important; 
+    overflow: hidden !important; /* Oculta cualquier cosa que se desborde */
+
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease !important;
+    transform: translateY(20px) !important; 
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+}
+#chat-window.visible {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: translateY(0) !important;
+    pointer-events: auto !important;
+}
+.chat-input {
+    /* Mantenemos el display: flex!important; para la alineación */
+    display: flex !important; 
+    align-items: center !important; 
+    padding: 8px 10px !important; /* Ajustamos el padding del contenedor */
+    border-top: 1px solid #eee !important;
+    background-color: white !important;
+}
+
+/* 2. Campo de Texto (Input) */
+.chat-input input[type="text"] {
+    flex-grow: 1 !important; 
+    padding: 10px 12px !important; /* Le damos más altura y espacio interno */
+    border: 1px solid #e0e0e0 !important; /* Borde más suave */
+    border-radius: 20px !important; /* Borde más redondeado para un look moderno */
+    margin-right: 8px !important; 
+    font-size: 14px !important;
+    transition: border-color 0.3s !important; /* Suavizamos el foco */
+}
+
+/* 3. Efecto de Foco para el Input */
+.chat-input input[type="text"]:focus {
+    border-color: #007bff !important; /* Color principal al escribir */
+    outline: none !important; /* Quitamos el feo borde predeterminado */
+}
+
+/* 4. Botón de Enviar (Send Button) */
+.chat-input button {
+    /* Eliminamos el padding grande y la forma de rectángulo */
+    background-color: transparent !important; /* Hacemos el fondo transparente */
+    color: #0056b3 !important; /* El ícono de avión toma el color principal */
+    border: none !important;
+    padding: 0 !important; /* Eliminamos el padding */
+    width: 30px !important; /* Le damos un tamaño fijo */
+    height: 30px !important;
+    border-radius: 50% !important; /* Lo hacemos redondo si quieres un efecto sutil */
+    cursor: pointer !important;
+    font-size: 18px !important; /* Hacemos el ícono de avión un poco más grande */
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    transition: color 0.2s !important;
+}
+
+.chat-input button:hover {
+    background-color: transparent !important; /* Mantenemos el fondo transparente */
+    color: #007bff !important; /* Color más oscuro al pasar el ratón */
+    transform: scale(1.1); /* Efecto sutil al hacer hover */
+}
+.chat-header {
+    background-color: #fff !important; /* Fondo azul */
+    color: #104486 !important;
+    font-weight: bold !important;
+    border-top-left-radius: 10px !important;
+    border-top-right-radius: 10px !important;
+    text-align: center !important;
+    align-items: center !important;
+    
+    position: relative !important; /* CRÍTICO: Para posicionar la imagen de PUENTI */
+    padding: 10px 15px !important;
+    min-height: 60px !important; /* Asegura espacio si el texto es corto */
+    display: flex !important; /* Para alinear el texto si hay varias líneas */
+    flex-direction: column !important; /* Texto se apila */
+    justify-content: center !important; /* Centra verticalmente el texto */
+}
+.chat-header::before { /* Usamos un pseudo-elemento para insertar la imagen */
+    content: ''; /* CRÍTICO: Necesario para pseudo-elementos */
+    position: absolute !important;
+    top: 15% !important; /* Centra verticalmente */
+    left: 10px !important; /* Distancia desde el borde izquierdo */
+    
+    width: 60px !important; /* Tamaño de la imagen de PUENTI */
+    height: 60px !important;
+    
+    /* REEMPLAZA ESTA URL con la de tu imagen de PUENTI */
+    background-image: url('../img/PUENTI.png') !important; 
+    background-size: contain !important; /* Asegura que la imagen quepa */
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    
+    z-index: 10001 !important;
+
+    /* Animación de flotar (opcional) */
+    animation: floatAnimation 2s ease-in-out infinite !important;
+    will-change: transform;
+}
+
+.chat-body {
+    flex-grow: 1 !important; 
+    padding: 15px !important;
+    background-color: #f9f9f9 !important;
+    overflow-y: auto !important; 
+}
+
+.chat-body p {
+    margin: 0 !important; 
+    padding: 0 !important; /* Asegura que el párrafo no tenga márgenes/padding extra */
+}
+
+/* Estado Oculto de la Ventana: Muy importante para que no aparezca al cargar */
+#chat-window.hidden {
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important; 
+}
+
+/* Estado Visible de la Ventana */
+#chat-window.visible {
+    opacity: 1;
+    visibility: visible !important;
+    transform: translateY(0) !important;
+}
+.chat-input {
+    display: flex; /* CRÍTICO: Alinea el input y el botón horizontalmente */
+    align-items: center; 
+    padding: 10px;
+    border-top: 1px solid #eee;
+    background-color: white;
+}
+
+.chat-input input[type="text"] {
+    flex-grow: 1; /* CRÍTICO: El input toma todo el espacio flexible */
+    padding: 8px;
+    /* ... otros estilos ... */
+}
+#floating-buttons-group {
+    position: fixed !important; /* Fuerza el posicionamiento fijo */
+    bottom: 1rem !important;
+    right: 1rem !important;
+    z-index: 10000 !important; /* Asegura que esté por encima de TODO */
+    display: flex !important;
+    flex-direction: column !important;
+    /* ... otros estilos ... */
+}
+/* boton minimizar */
+#chat-close-btn {
+    position: absolute !important; 
+    top: 18px !important; 
+    right: 10px !important; 
+    transform: translateY(-50%) !important; 
+    
+    /* === CORRECCIÓN CRÍTICA: Eliminar la apariencia de botón === */
+    background: transparent !important; /* CRÍTICO: Fondo transparente */
+    border: none !important; /* CRÍTICO: Elimina el borde gris/azul */
+    box-shadow: none !important; /* Elimina cualquier sombra */
+    /* ========================================================== */
+    
+    color: #104486 !important; /* El guion se ve blanco */
+    font-size: 30px !important; 
+    cursor: pointer !important;
+    
+    /* Ajustes visuales finos para el guion */
+    padding: 0 5px !important; /* Le da un área clicable sin afectar mucho el guion */
+    line-height: 1 !important;
+    z-index: 15 !important; 
+    
+    transition: color 0.2s ease, transform 0.2s ease !important; 
+}
+
+#chat-close-btn:hover {
+    color: #007bff !important; /* Se vuelve un poco más gris al pasar el ratón */
+    transform: translateY(-50%) scale(1.1) !important; 
+}
+
+/* 🔑 Asegúrate de que esta regla exista y esté al final del CSS */
+@keyframes floatAnimation {
+    0% { transform: translateY(0px); } 
+    50% { transform: translateY(-8px); } /* Se mueve 8px hacia arriba */
+    100% { transform: translateY(0px); } 
+}
+
+/* 🆕 Estilos para el mensaje de error */
+#chat-error-message {
+    color: red !important; /* Texto de error en rojo */
+    font-size: 12px !important;
+    padding: 5px 10px 0 10px !important;
+    text-align: center !important;
+    width: 100% !important; /* Ocupa todo el ancho */
+    margin-top: -5px !important; /* Lo sube un poco para pegarlo al input */
+    position: absolute !important; /* Posicionamiento absoluto para controlarlo mejor */
+    bottom: 0px !important; /* Lo ancla al fondo del chat-input */
+}
+
+/* 🆕 Clase para ocultar el mensaje de error */
+.hidden-error {
+    opacity: 0 !important;
+    visibility: hidden !important;
+    transition: opacity 0.3s ease !important;
+}
+
+/* 🆕 Ajuste en .chat-input para contener el error */
+.chat-input {
+    position: relative !important; /* CRÍTICO: Necesario para posicionar el mensaje de error absoluto */
+    /* El padding debe dejar espacio para el error: 
+       Asegúrate de que el padding-bottom sea suficiente, por ejemplo: */
+    padding: 8px 10px 25px 10px !important; /* Aumentamos el padding-bottom */
+}
 
 /* FOOTER */
 footer, nav, .quienes-somos{
@@ -296,3 +545,6 @@ footer li:hover{
 .card.show-info .btn-toggle i {
   transform: rotate(180deg);
 }
+
+
+/* chatbot puenti */

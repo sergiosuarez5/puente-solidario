@@ -7,6 +7,8 @@
         <title>Fundaciones Donar</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
         <link rel="stylesheet" href="../assets/css/style.css">
         <link rel="icon" type="" href="../assets/img/logochico.png">
     </head>
@@ -200,12 +202,38 @@
             </div>
         </div>
     </footer>
-        
+        <!-- boton PUENTI -->
+                <div id="floating-buttons-group">
+            
+            <div id="chatbot-wrapper">
+                <div id="chat-window" class="hidden">
+                    <div class="text-center chat-header">
+                        ¡Hola soy PUENTI! <br>¡Bienvenid@!
+                    </div>
+                    <div class="text-center chat-body">
+                        <p>Escribí tu consulta acá.</p>
+                    </div>
+                    <div class="chat-input">
+                        <input type="text" placeholder="Escribe tu mensaje..." id="chat-message-input">
+                        <button id="send-btn">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                        
+                        <span id="chat-error-message" class="hidden-error">
+                            ¡Debes escribir un mensaje!
+                        </span>
+                    </div>
+                </div>
+                
+                <button id="chatbot-toggle-btn" aria-label="Abrir Chat" title="Consultar Chatbot">
+                    <img src="../assets/img/puenticon.png" alt="PUENTI" width="38">
+                </button>
+            </div>
 
     <!-- boton scroll top & de donar -->
     <a class="floating-btn donate-btn" href="#contacto" aria-label="Donar" title="Donar"><img src="../assets/img/logochico.png" alt="Logo chico" width="30">
     <a class="scroll-top" href="#inicio" aria-label="Ir arriba" title="Ir arriba">▲</a>
-    <script src="main.js"></script>
+    <script src="../script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     </body>
 </html>
