@@ -171,14 +171,13 @@ body{
 
 /* 🆕 Contenedor para TODOS los botones flotantes */
 #floating-buttons-group {
-    position: fixed;
-    bottom: 1rem; 
+    position: fixed !important;
+    bottom: 5px !important; 
     right: 1rem; 
-    display: flex;
-    flex-direction: column; /* <--- CAMBIAR A 'column' para respetar el orden del HTML (Chatbot primero, arriba) */
-    align-items: flex-end; 
-    gap: 0.8rem; 
-    z-index: 1000; 
+    display: flex !important;
+    flex-direction: column !important; 
+    gap: 0.8rem !important; 
+    z-index: 10000 !important; 
 }
 
 
@@ -215,7 +214,6 @@ body{
 #chatbot-toggle-btn {
     background-color: #fff; /* Azul fuerte para el chat */
     cursor: pointer;
-    font-size: 24px;
     z-index: 1001; /* Ligeramente superior a su ventana de chat */
 }
 
@@ -232,6 +230,7 @@ body{
     position: relative !important; 
     width: 48px; /* Ancho igual al botón */
     height: 48px; /* Altura igual al botón */
+    z-index: 99999 !important;
 }
 
 #chatbot-toggle-btn {
@@ -241,8 +240,8 @@ body{
 }
 
 #chat-window {
-position: absolute !important; 
-    bottom: calc(48px + 0.8rem) !important;
+    position: absolute !important; 
+    bottom: 60px !important;
     right: 0 !important; 
     
     width: 300px !important;
