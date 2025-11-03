@@ -1,5 +1,5 @@
 let fundaciones = []; // array vacío que se llenará desde backend en data -> fundaciones.json 
-const API_URL = "http://localhost:4000/api/fundaciones"; 
+const API_URL = "https://puente-backend-production.up.railway.app/api/fundaciones"; 
 
 // ----------------------
 // Paginación para cambiar de sección con las flechas
