@@ -64,43 +64,42 @@
                     <p class="subtitulo-seguridad text-center">
                         Tus datos están protegidos por cifrado de alta seguridad<i class="bi bi-shield-shaded"></i>
                     </p>
-                        <form id="webToLeadForm"
-                        action=""
+                        <form
+                        action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00Dg5000000o86B"
                         method="POST"
                         onsubmit="alert('¡Gracias por tu aporte! Tu información fue enviada correctamente a Puente Solidario.')">
                         
                         <input type="hidden" name="oid" value="00Dg5000000o86B">
                         <input type="hidden" name="last_name" value="-">
-                        <input type="hidden" name="company" value="Fundación">
-                        <input type="hidden" name="retURL" value="https://sergiosuarez5.github.io/puente-solidario/index.html">
+                        <input type="hidden" name="company" value="Donación">
+                        <input type="hidden" name="retURL" value="https://puentesolidario.netlify.app/">
 
                         <div class="mb-3">
                             <label for="first_name">Nombre completo</label>
-                            <input id="first_name" class="form-control" name="first_name" type="text" placeholder="Ej: Facundo Gómez">
+                            <input id="first_name" class="form-control" name="first_name" type="text" placeholder="Ej: Facundo Gómez" required>
                         </div>
 
                         <div class="mb-3">
                             <label for="email">Correo electrónico</label>
-                            <input id="email" class="form-control" name="email" type="email" placeholder="nombre@email.com">
+                            <input id="email" class="form-control" name="email" type="email" placeholder="nombre@email.com" required>
                         </div>
 
                         <div class="mb-3">
                             <label for="phone">Teléfono</label>
-                            <input id="phone" class="form-control" name="phone" type="tel" placeholder="Ej: 01123456789">
+                            <input id="phone" class="form-control" name="phone" type="tel" placeholder="Ej: 01123456789" pattern="[0-9]{6,15}" required>
                         </div>
-
                         <div class="mb-3">
-                            <label for="00Ng5000002EuFX" class="form-label">Fundación</label>
-                            <select  id="00Ng5000002EuFX" name="00Ng5000002EuFX" title="Localidad" required class="form-select">
-                                <option value="">--None--</option>
-                                <option value="Esperanza">Fundación Esperanza</option>
-                                <option value="Vida">Fundación Vida</option>
-                                <option value="Futuro">Fundación Futuro</option>
-                                <option value="Luz">Fundación Luz</option>
-                                <option value="Semillas">Fundación Semillas</option>
-                                <option value="Hogar">Fundación Hogar</option>
+                            <label for="00Ng5000002pfup" class="form-label">Fundación</label>
+                            <select id="00Ng5000002pfup" name="00Ng5000002pfup" title="Donó a" required class="form-select">
+                                <option value="">--Seleccioná una fundación--</option>
+                                <option value="Fundación Esperanza">Fundación Esperanza</option>
+                                <option value="Fundación Vida">Fundación Vida</option>
+                                <option value="Fundación Futuro">Fundación Futuro</option>
+                                <option value="Fundación Semillas">Fundación Semillas</option>
+                                <option value="Fundación Hogar">Fundación Hogar</option>
                             </select>
                         </div>
+
                         <div class="mb-4">
                         <label class="form-label d-block">Seleccione el Método de Pago:</label>
                         
@@ -137,12 +136,12 @@
                         </div>
                     </div>                        
                     <div class="mb-3">
-                        <label for="cantidadPagar" class="form-label">Cantidad a Pagar (o Cuota)</label>
-                        <input type="number" id="cantidadPagar" class="form-control" name="cantidad_inscripcion" min="1" step="0.01" placeholder="Ej: 500.00" required>
-                        <div class="form-text text-white">Verifique el monto antes de enviar.</div>
+                        <label for="00Ng5000002q0PP" class="form-label">Cantidad a Pagar (o Cuota)</label>
+                        <input type="text" id="00Ng5000002q0PP" class="form-control" name="00Ng5000002q0PP" size="20" placeholder="Ej: 500.00" required>
+                        <div class="form-text text-white">Verifique el monto antes de enviar</div>
                     </div>
                         <div class="d-grid">
-                            <button type="submit" class="btn btn-primary">ENVIAR DONACIÓN</button>
+                            <button type="submit" name="submit" class="btn btn-primary">ENVIAR DONACIÓN</button>
                         </div>
                     </form>
 
