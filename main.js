@@ -1,95 +1,19 @@
-document.querySelector("form").addEventListener("submit", function(event) {
-    event.preventDefault(); 
+let fundaciones = []; // array vacío que se llenará desde backend en data -> fundaciones.json 
+const API_URL = "http://localhost:4000/api/fundaciones"; 
 
-    const form = event.target;
-    const data = new FormData(form);
-
-    fetch(form.action, {
-        method: "POST",
-        body: data,
-        mode: "no-cors" 
-
-    }).then(() => {
-        document.getElementById("mensaje-exito").style.display = "block";
-        form.reset();
-
-    }).catch(err => {
-        alert("Ocurrió un error al enviar tu solicitud. Intenta de nuevo.");
-        console.error(err);
-    });
-});
-
-function toggleCard(button) {
-  const card = button.closest('.card');
-  const botones = card.querySelectorAll('.btn-toggle');
-  card.classList.toggle('show-info');
-
-  const mostrarInfo = card.classList.contains('show-info');
-
-  botones.forEach(boton => {
-    if (mostrarInfo) {
-      boton.innerHTML = 'Ver menos <i class="bi bi-caret-up-fill"></i>';
-    } else {
-      boton.innerHTML = 'Ver más <i class="bi bi-caret-down-fill"></i>';
-    }
-  });
-}
-
-// Datos de fundaciones
-const fundaciones = [
-  {
-    nombre: "FUNDACIÓN ESPERANZA",
-    imagen: "./assets/img/abrazo.jpg",
-    descripcion: "Apoyamos a comunidades vulnerables. Entregamos alimentos y suministros. Fomentamos la solidaridad y el bienestar social.",
-    link: "./page/donaciones.html"
-  },
-  {
-    nombre: "FUNDACIÓN VIDA",
-    imagen: "./assets/img/fundacion7.jpg",
-    descripcion: "Promovemos la salud y el bienestar. Distribuimos ayuda esencial. Nuestro foco es la calidad de vida y el soporte vital.",
-    link: "./page/donaciones.html"
-  },
-  {
-    nombre: "FUNDACIÓN FUTURO",
-    imagen: "./assets/img/fundacion6.jpg",
-    descripcion: "Invertimos en la educación de jóvenes. Creamos oportunidades. Aseguramos un mañana mejor.",
-    link: "./page/donaciones.html"
-  },
-  {
-    nombre: "FUNDACIÓN LUZ",
-    imagen: "./assets/img/fundacion3.jpg",
-    descripcion: "Trabajamos por un mundo más justo e inclusivo. Ofrecemos apoyo a personas mayores. Combatimos la marginación y la soledad.",
-    link: "./page/donaciones.html"
-  },
-  {
-    nombre: "FUNDACIÓN SEMILLAS",
-    imagen: "./assets/img/fundacion1.jpg",
-    descripcion: "Impulsamos proyectos de desarrollo sostenible. Entregamos ayuda directa en calles. Promovemos el cambio ambiental y social.",
-    link: "./page/donaciones.html"
-  },
-  {
-    nombre: "FUNDACIÓN HOGAR",
-    imagen: "./assets/img/fundacion4.jpg",
-    descripcion: "Brindamos apoyo a familias sin techo. Ofrecemos refugio y seguridad. Donamos cajas de ayuda. Nuestra meta es el hogar.",
-    link: "./page/donaciones.html"
-  }
-];
-console.log("📦 Script fundaciones cargado"); // Para saber si el JS se está ejecutando
-
-const container = document.getElementById("fundacionesContainer");
+// ----------------------
+// Paginación para cambiar de sección con las flechas
+// ----------------------
 let currentPage = 0;
 const itemsPerPage = 6;
 
 function renderFundaciones() {
-  console.log("🔄 renderFundaciones() ejecutado");
-  console.log("Total de fundaciones:", fundaciones.length);
+  const container = document.getElementById("fundacionesContainer");
+  container.innerHTML = "";
 
-  container.innerHTML = ""; // Limpiar
   const start = currentPage * itemsPerPage;
   const end = start + itemsPerPage;
   const visibles = fundaciones.slice(start, end);
-
-  console.log("Mostrando fundaciones del", start, "al", end, visibles);
 
   visibles.forEach(f => {
     const card = document.createElement("div");
@@ -116,73 +40,108 @@ function renderFundaciones() {
     `;
     container.appendChild(card);
   });
+
+  document.getElementById("prevBtn").disabled = currentPage === 0;
+  document.getElementById("nextBtn").disabled = (currentPage + 1) * itemsPerPage >= fundaciones.length;
 }
 
-document.getElementById("prevBtn").addEventListener("click", () => {
-  if (currentPage > 0) {
-    currentPage--;
-    renderFundaciones();
-  }
-});
+// ----------------------
+// Toggle funcion para el boton de la card Ver más / Ver menos
+// ----------------------
+function toggleCard(button) {
+  const card = button.closest('.card');
+  const botones = card.querySelectorAll('.btn-toggle');
+  card.classList.toggle('show-info');
 
-document.getElementById("nextBtn").addEventListener("click", () => {
-  if ((currentPage + 1) * itemsPerPage < fundaciones.length) {
-    currentPage++;
-    renderFundaciones();
-  }
-});
+  const mostrarInfo = card.classList.contains('show-info');
+  botones.forEach(boton => {
+    boton.innerHTML = mostrarInfo
+      ? 'Ver menos <i class="bi bi-caret-up-fill"></i>'
+      : 'Ver más <i class="bi bi-caret-down-fill"></i>';
+  });
+}
 
+// ----------------------
+// Cargar fundaciones desde la API con manejo de errores
+// ----------------------
+async function cargarFundaciones() {
+  try {
+    const res = await fetch(API_URL);
+    if (!res.ok) throw new Error('Error al obtener fundaciones');
+    const data = await res.json();
+    fundaciones = data;
+    currentPage = 0; 
+    renderFundaciones();
+  } catch (err) {
+    console.error("No se pudieron cargar fundaciones desde API:", err);
+  }
+}
+
+// ----------------------
+// Obtener datos del formulario y manejar su envío
+// ----------------------
 document.addEventListener("DOMContentLoaded", () => {
-  console.log("🌐 DOMContentLoaded activado");
-
-  // ✅ Recuperar fundaciones extra guardadas
-  const guardadas = JSON.parse(localStorage.getItem("fundacionesExtra")) || [];
-  console.log("📂 Fundaciones guardadas recuperadas:", guardadas);
-
-  fundaciones.push(...guardadas);
-  console.log("📊 Total tras combinar:", fundaciones.length);
-
-  // ✅ Renderizar fundaciones (con las guardadas incluidas)
-  renderFundaciones();
-
-  // ✅ Manejo del formulario
   const form = document.getElementById("webToLeadForm");
+  if (!form) return console.warn("⚠️ No se encontró el formulario");
+  cargarFundaciones();
 
-  if (!form) {
-    console.warn("⚠️ No se encontró el formulario con id 'webToLeadForm'");
-    return;
-  }
+  form.addEventListener("submit", async (event) => {
+    event.preventDefault();
 
-  form.addEventListener("submit", (event) => {
-    event.preventDefault(); // Evita envío inmediato
-    console.log("📝 Evento submit detectado");
-
-    const nombre = document.getElementById("first_name").value;
-    const descripcion = document.getElementById("description").value || "Sin descripción disponible.";
+    const nombre = document.getElementById("first_name").value || "SIN NOMBRE";
+    const descripcion = document.getElementById("description").value || "Sin descripción.";
     const imagen = document.getElementById("imageUrl").value || "./assets/img/fundacion7.jpg";
-
-    console.log("📩 Datos capturados:", { nombre, descripcion, imagen });
 
     const nuevaFundacion = {
       nombre: nombre.toUpperCase(),
-      imagen: imagen,
-      descripcion: descripcion,
+      descripcion,
+      imagen,
       link: "./page/donaciones.html"
     };
 
-    console.log("✅ Nueva fundación creada:", nuevaFundacion);
+    try {
+      const postPromise = fetch(API_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(nuevaFundacion)
+      }).then(r => r.json());
 
-    const guardadas = JSON.parse(localStorage.getItem("fundacionesExtra")) || [];
-    guardadas.push(nuevaFundacion);
-    localStorage.setItem("fundacionesExtra", JSON.stringify(guardadas));
+      const timeout = new Promise(resolve => setTimeout(() => resolve(null), 2000));
+      const resultado = await Promise.race([postPromise, timeout]);
 
-    console.log("💾 Fundaciones guardadas en localStorage:", guardadas);
+      if (resultado) console.log('Guardado en API:', resultado);
+      else console.warn('No se pudo guardar en API (o tardó demasiado).');
 
-    // Esperar un poco y luego enviar a Salesforce
-    setTimeout(() => {
-      console.log("🚀 Enviando formulario a Salesforce...");
-      form.submit();
-    }, 300);
+    } catch (err) {
+      console.error("Error al guardar fundación:", err);
+    }
+
+    fundaciones.unshift(nuevaFundacion);
+    currentPage = 0;
+    renderFundaciones();
+
+    // Enviar a Salesforce después de haberse guardado localmente los datos
+    setTimeout(() => form.submit(), 300);
+  });
+
+  // Flechas de paginación
+  document.getElementById("prevBtn").addEventListener("click", () => {
+    if (currentPage > 0) {
+      currentPage--;
+      renderFundaciones();
+    }
+  });
+  document.getElementById("nextBtn").addEventListener("click", () => {
+    if ((currentPage + 1) * itemsPerPage < fundaciones.length) {
+      currentPage++;
+      renderFundaciones();
+    }
   });
 });
+
+
+
+
+
+
 

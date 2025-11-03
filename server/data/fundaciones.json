@@ -1,0 +1,50 @@
+[
+  {
+    "nombre": "FUNDACIÓN ESPERANZA",
+    "imagen": "./assets/img/abrazo.jpg",
+    "descripcion": "Apoyamos a comunidades vulnerables...",
+    "link": "./page/donaciones.html"
+  },
+  {
+    "nombre": "FUNDACIÓN VIDA",
+    "imagen": "./assets/img/fundacion7.jpg",
+    "descripcion": "Promovemos la salud y el bienestar. Distribuimos ayuda esencial. Nuestro foco es la calidad de vida y el soporte vital.",
+    "link": "./page/donaciones.html"
+  },
+  {
+    "nombre": "FUNDACIÓN FUTURO",
+    "imagen": "./assets/img/fundacion6.jpg",
+    "descripcion": "Invertimos en la educación de jóvenes. Creamos oportunidades. Aseguramos un mañana mejor.",
+    "link": "./page/donaciones.html"
+  },
+  {
+    "nombre": "FUNDACIÓN LUZ",
+    "imagen": "./assets/img/fundacion3.jpg",
+    "descripcion": "Trabajamos por un mundo más justo e inclusivo. Ofrecemos apoyo a personas mayores. Combatimos la marginación y la soledad.",
+    "link": "./page/donaciones.html"
+  },
+  {
+    "nombre": "FUNDACIÓN SEMILLAS",
+    "imagen": "./assets/img/fundacion1.jpg",
+    "descripcion": "Impulsamos proyectos de desarrollo sostenible. Entregamos ayuda directa en calles. Promovemos el cambio ambiental y social.",
+    "link": "./page/donaciones.html"
+  },
+  {
+    "nombre": "FUNDACIÓN HOGAR",
+    "imagen": "./assets/img/fundacion4.jpg",
+    "descripcion": "Brindamos apoyo a familias sin techo. Ofrecemos refugio y seguridad. Donamos cajas de ayuda. Nuestra meta es el hogar.",
+    "link": "./page/donaciones.html"
+  },
+  {
+    "nombre": "FUNDACION PRUEBA",
+    "descripcion": "Somos una fundación de prueba con ganas de crecer en este mundo.",
+    "imagen": "https://imgs.search.brave.com/l2KuexQ4wUXn6mI4cO_C7cIh-YEbfq21RTMuZ6NpkBQ/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMjAx/MDYwNjgzOC9lcy9m/b3RvL2RpdmVyc29z/LXZvbHVudGFyaW9z/LXNvbnIlQzMlQURl/bi15LXIlQzMlQURl/bi1hbnRlcy1kZWwt/ZXZlbnRvLmpwZz9z/PTYxMng2MTImdz0w/Jms9MjAmYz05dHlC/bjJ3OUItazZYamZw/emstQ1kyQkx4YVo4/V0VuVU4tWHFRRHd4/REo0PQ",
+    "link": "./page/donaciones.html"
+  },
+  {
+    "nombre": "FUNDACION PRUEBA 2",
+    "descripcion": "Hola somos una fundacion de prueba 2 etc etc",
+    "imagen": "https://imgs.search.brave.com/l2KuexQ4wUXn6mI4cO_C7cIh-YEbfq21RTMuZ6NpkBQ/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMjAx/MDYwNjgzOC9lcy9m/b3RvL2RpdmVyc29z/LXZvbHVudGFyaW9z/LXNvbnIlQzMlQURl/bi15LXIlQzMlQURl/bi1hbnRlcy1kZWwt/ZXZlbnRvLmpwZz9z/PTYxMng2MTImdz0w/Jms9MjAmYz05dHlC/bjJ3OUItazZYamZw/emstQ1kyQkx4YVo4/V0VuVU4tWHFRRHd4/REo0PQ",
+    "link": "./page/donaciones.html"
+  }
+]
