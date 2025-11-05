@@ -52,17 +52,16 @@ app.get('/', (req, res) => res.send('API Puente Solidario OK'));
 
 app.listen(PORT, () => console.log(`API corriendo en http://localhost:${PORT}`));
 
-// Eliminar una fundación por nombre (en mayúsculas)
-app.delete('/api/fundaciones/:nombre', (req, res) => {
-  const nombre = req.params.nombre.toUpperCase();
+// DELETE por índice
+app.delete('/api/fundaciones/index/:pos', (req, res) => {
+  const pos = parseInt(req.params.pos, 10);
   let data = readData();
 
-  const nuevaLista = data.filter(f => f.nombre !== nombre);
-
-  if (nuevaLista.length === data.length) {
-    return res.status(404).json({ error: 'Fundación no encontrada' });
+  if (isNaN(pos) || pos < 0 || pos >= data.length) {
+    return res.status(400).json({ error: "Índice inválido" });
   }
 
-  writeData(nuevaLista);
-  res.json({ success: true, eliminado: nombre });
+  const eliminada = data.splice(pos, 1)[0];
+  writeData(data);
+  res.json({ mensaje: "Fundación eliminada por índice", eliminada });
 });
