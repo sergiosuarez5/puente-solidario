@@ -51,3 +51,18 @@ app.post('/api/fundaciones', (req, res) => {
 app.get('/', (req, res) => res.send('API Puente Solidario OK'));
 
 app.listen(PORT, () => console.log(`API corriendo en http://localhost:${PORT}`));
+
+// Eliminar una fundación por nombre (en mayúsculas)
+app.delete('/api/fundaciones/:nombre', (req, res) => {
+  const nombre = req.params.nombre.toUpperCase();
+  let data = readData();
+
+  const nuevaLista = data.filter(f => f.nombre !== nombre);
+
+  if (nuevaLista.length === data.length) {
+    return res.status(404).json({ error: 'Fundación no encontrada' });
+  }
+
+  writeData(nuevaLista);
+  res.json({ success: true, eliminado: nombre });
+});
