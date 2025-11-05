@@ -74,6 +74,7 @@
                         <input type="hidden" name="company" value="Donación">
                         <input type="hidden" name="retURL" value="https://puentesolidario.netlify.app/">
 
+
                         <div class="mb-3">
                             <label for="first_name">Nombre completo</label>
                             <input id="first_name" class="form-control" name="first_name" type="text" placeholder="Ej: Facundo Gómez" required>
@@ -101,45 +102,62 @@
                         </div>
 
                         <div class="mb-4">
-                        <label class="form-label d-block">Seleccione el Método de Pago:</label>
-                        
-                        <div class="d-flex flex-wrap gap-3">
-                            
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" value="Transferencia Bancaria" id="pagoTransferencia" name="metodo_pago_unico">
+                            <label class="form-label d-block">Seleccione el Método de Pago:</label>
+
+                            <div class="d-flex flex-wrap gap-3">
+
+                                <div class="form-check form-check-inline">
+                                <input class="form-check-input" 
+                                        type="radio" 
+                                        id="pagoTransferencia" 
+                                        name="00Ng50000033cIL" 
+                                        value="Transferencia">
                                 <label class="form-check-label" for="pagoTransferencia">
                                     <i class="bi bi-bank me-1 text-primary"></i> Transferencia Bancaria
                                 </label>
-                            </div>
+                                </div>
 
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" value="Tarjeta de Crédito / Débito" id="pagoTarjeta" name="metodo_pago_unico">
+                                <div class="form-check form-check-inline">
+                                <input class="form-check-input" 
+                                        type="radio" 
+                                        id="pagoTarjeta" 
+                                        name="00Ng50000033cIL" 
+                                        value="Tarjeta">
                                 <label class="form-check-label" for="pagoTarjeta">
                                     <i class="bi bi-credit-card me-1 text-primary"></i> Tarjeta (Crédito/Débito)
                                 </label>
-                            </div>
+                                </div>
 
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" value="Mercado Pago" id="pagoMercadoPago" name="metodo_pago_unico">
+                                <div class="form-check form-check-inline">
+                                <input class="form-check-input" 
+                                        type="radio" 
+                                        id="pagoMercadoPago" 
+                                        name="00Ng50000033cIL" 
+                                        value="Mercado Pago">
                                 <label class="form-check-label" for="pagoMercadoPago">
                                     <i class="bi bi-wallet me-1 text-info"></i> Mercado Pago
                                 </label>
-                            </div>
+                                </div>
 
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" value="PayPal" id="pagoPayPal" name="metodo_pago_unico">
+                                <div class="form-check form-check-inline">
+                                <input class="form-check-input" 
+                                        type="radio" 
+                                        id="pagoPayPal" 
+                                        name="00Ng50000033cIL" 
+                                        value="PayPal">
                                 <label class="form-check-label" for="pagoPayPal">
                                     <i class="bi bi-paypal me-1 text-primary"></i> PayPal
                                 </label>
-                            </div>
+                                </div>
 
+                            </div>
                         </div>
-                    </div>                        
-                    <div class="mb-3">
-                        <label for="00Ng5000002q0PP" class="form-label">Cantidad a Pagar (o Cuota)</label>
-                        <input type="text" id="00Ng5000002q0PP" class="form-control" name="00Ng5000002q0PP" size="20" placeholder="Ej: 500.00" required>
-                        <div class="form-text text-white">Verifique el monto antes de enviar</div>
-                    </div>
+                       
+                        <div class="mb-3">
+                            <label for="00Ng5000002q0PP" class="form-label">Cantidad a Pagar (o Cuota)</label>
+                            <input type="text" id="00Ng5000002q0PP" class="form-control" name="00Ng5000002q0PP" size="20" placeholder="Ej: 500.00" required>
+                            <div class="form-text text-white">Verifique el monto antes de enviar</div>
+                        </div>
                         <div class="d-grid">
                             <button type="submit" name="submit" class="btn btn-primary">ENVIAR DONACIÓN</button>
                         </div>

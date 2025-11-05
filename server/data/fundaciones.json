@@ -34,17 +34,5 @@
     "imagen": "./assets/img/fundacion4.jpg",
     "descripcion": "Brindamos apoyo a familias sin techo. Ofrecemos refugio y seguridad. Donamos cajas de ayuda. Nuestra meta es el hogar.",
     "link": "./page/donaciones.html"
-  },
-  {
-    "nombre": "FUNDACION PRUEBA",
-    "descripcion": "Somos una fundación de prueba con ganas de crecer en este mundo.",
-    "imagen": "https://imgs.search.brave.com/l2KuexQ4wUXn6mI4cO_C7cIh-YEbfq21RTMuZ6NpkBQ/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMjAx/MDYwNjgzOC9lcy9m/b3RvL2RpdmVyc29z/LXZvbHVudGFyaW9z/LXNvbnIlQzMlQURl/bi15LXIlQzMlQURl/bi1hbnRlcy1kZWwt/ZXZlbnRvLmpwZz9z/PTYxMng2MTImdz0w/Jms9MjAmYz05dHlC/bjJ3OUItazZYamZw/emstQ1kyQkx4YVo4/V0VuVU4tWHFRRHd4/REo0PQ",
-    "link": "./page/donaciones.html"
-  },
-  {
-    "nombre": "FUNDACION PRUEBA 2",
-    "descripcion": "Hola somos una fundacion de prueba 2 etc etc",
-    "imagen": "https://imgs.search.brave.com/l2KuexQ4wUXn6mI4cO_C7cIh-YEbfq21RTMuZ6NpkBQ/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMjAx/MDYwNjgzOC9lcy9m/b3RvL2RpdmVyc29z/LXZvbHVudGFyaW9z/LXNvbnIlQzMlQURl/bi15LXIlQzMlQURl/bi1hbnRlcy1kZWwt/ZXZlbnRvLmpwZz9z/PTYxMng2MTImdz0w/Jms9MjAmYz05dHlC/bjJ3OUItazZYamZw/emstQ1kyQkx4YVo4/V0VuVU4tWHFRRHd4/REo0PQ",
-    "link": "./page/donaciones.html"
   }
 ]
