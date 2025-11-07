@@ -239,6 +239,109 @@ body{
     right: 0;
 }
 
+/* Estilo para los mensajes que contienen botones (Asegura que se vean bien en flex) */
+.chat-message.has-button {
+    flex-direction: column !important; /* Apila texto y botón verticalmente */
+    align-items: flex-start !important;
+}
+.chat-message {
+    /* ⚠️ CLAVE: Aumenta el margen inferior para separarlo del siguiente mensaje */
+    margin-bottom: 12px !important; /* Aumentamos de 8px (o el valor que tuvieras) a 12px */
+    
+    /* Asegúrate de que no haya padding vertical molesto */
+    padding: 0 !important; 
+}
+
+/* Estilo para el botón dentro del chat */
+.chat-button {
+    display: inline-block !important;
+    background-color: #94DDDE !important; /* Color de tu marca (celeste) */
+    color: #104486 !important; /* Azul oscuro de la marca */
+    border: none !important;
+    padding: 8px 15px !important;
+    border-radius: 20px !important;
+    text-decoration: none !important;
+    font-weight: bold !important;
+    cursor: pointer !important;
+    margin-top: 10px !important;
+    transition: background-color 0.2s ease, transform 0.2s ease !important;
+}
+
+.chat-button:hover {
+    background-color: #a0f0f1 !important;
+    transform: translateY(-1px) !important;
+}
+
+/* Ajuste para que la burbuja de texto y el botón estén juntos */
+.chat-message.bot-message.has-button p {
+    margin-bottom: 0 !important;
+}
+
+/* 🤖 Mensajes de PUENTI (Lado Izquierdo) */
+.bot-message {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end; /* Asegura que el nombre quede abajo de la burbuja o centrado */
+    margin-right: 10% !important; 
+    margin-left: 0 !important;
+    position: relative; /* Necesario para posicionar el pseudo-elemento */
+    padding-left: 50px; /* Deja espacio para el nombre */
+}
+
+
+/* 👤 INYECTAR EL NOMBRE "PUENTI" */
+.bot-message::after {
+    content: "PUENTI"; /* ⚠️ El texto que se mostrará */
+    position: absolute;
+    /* Lo colocamos al fondo y a la izquierda (ajusta left si el ícono está más separado) */
+    bottom: 0px; /* Al fondo del espacio que creamos con padding-bottom */
+    left: 0; 
+    top: 0; /* Colocar en la parte superior del mensaje */
+    top: -18px;
+    left: 8px; /* Mover a la izquierda del contenedor del mensaje */
+
+    font-size: 0.75rem; /* ⚠️ Tamaño pequeño */
+    color: #888; /* Color gris suave */
+    font-weight: 500;
+    white-space: nowrap; /* Evita que el texto se rompa */
+}
+
+.bot-message p {
+    background-color: #c3eff0 !important;
+    color: #333 !important;
+    padding: 15px 20px !important;
+    max-width: 80% !important; /* El bot mantiene un límite más estricto */
+    border-radius: 15px 15px 15px 5px !important; 
+    margin-left: 0;
+}
+/* 👤 Mensajes del Usuario (Lado Derecho) */
+.user-message {
+    display: flex;
+    justify-content: flex-end; 
+    /* Quitamos los márgenes laterales */
+    margin-left: 0 !important; 
+    margin-right: 0 !important;
+}
+
+.user-message p {
+    background-color: #104486 !important; /* Azul oscuro */
+    color: white !important;
+    padding: 15px 20px !important; /* Mismo padding para simetría visual */
+    max-width: 95% !important; 
+    border-radius: 15px 15px 5px 15px !important; 
+    /* ... otros estilos ... */
+}
+/* Estilo base para la burbuja de texto */
+.chat-message p {
+    /* Mantiene la burbuja con un ancho máximo del 80% del chat-body */
+    max-width: 80% !important; 
+    padding: 10px 15px !important;
+    margin-bottom: 8px !important; 
+    font-size: 14px !important;
+    line-height: 1.4;
+    word-wrap: break-word; 
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); 
+}
 #chat-window {
     position: absolute !important; 
     bottom: 60px !important;
@@ -275,7 +378,7 @@ body{
     align-items: center !important; 
     padding: 8px 10px !important; /* Ajustamos el padding del contenedor */
     border-top: 1px solid #eee !important;
-    background-color: white !important;
+    background-color: #c3eff0 !important;
 }
 
 /* 2. Campo de Texto (Input) */
@@ -319,7 +422,7 @@ body{
     transform: scale(1.1); /* Efecto sutil al hacer hover */
 }
 .chat-header {
-    background-color: #fff !important; /* Fondo azul */
+    background-color: #c3eff0 !important; /* Fondo azul */
     color: #104486 !important;
     font-weight: bold !important;
     border-top-left-radius: 10px !important;
@@ -363,9 +466,52 @@ body{
     overflow-y: auto !important; 
 }
 
+.chat-body .user-message p { 
+    background-color: #104486 !important; 
+    color: white !important;
+    
+    /* Mantenemos tu padding generoso */
+    padding: 10px 20px !important; 
+    
+    /* 💥 CLAVE: Aumentamos el ancho máximo a 95% del contenedor del chat. */
+    /* Esto es lo que fuerza a que "HOLA" use más fondo. */
+    max-width: 95% !important; 
+    
+    border-radius: 15px 15px 2px 15px !important; 
+    box-shadow: none !important; 
+}
+
+.chat-body .bot-message p { 
+        /* Mantenemos tu padding generoso */
+    padding: 5px 8px !important;    
+    /* Esto es lo que fuerza a que "HOLA" use más fondo. */
+    max-width: 95% !important; 
+    border-radius: 20px 20px 15px 1px !important; 
+    box-shadow: none !important; 
+}
+
 .chat-body p {
     margin: 0 !important; 
+    margin-bottom: 20px !important;
     padding: 0 !important; /* Asegura que el párrafo no tenga márgenes/padding extra */
+}
+
+.user-message {
+    display: flex;
+    justify-content: flex-end; 
+    /* Cambia el eje principal a columna y alinea los ítems a la derecha */
+    flex-direction: column; 
+    align-items: flex-end; 
+    margin-left: 0 !important; 
+    margin-right: 0;
+    margin-bottom: 12px !important; /* Mantenemos la separación entre mensajes */
+}
+.user-label {
+    font-size: 0.75rem; /* Pequeño y sutil */
+    color: #888; /* Color gris suave */
+    font-weight: 500;
+    margin-top: -18px; /* Dejamos solo 1px de separación mínima */
+    margin-right: 5px;
 }
 
 /* Estado Oculto de la Ventana: Muy importante para que no aparezca al cargar */
