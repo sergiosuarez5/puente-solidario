@@ -43,6 +43,7 @@ function renderFundaciones() {
 
   document.getElementById("prevBtn").disabled = currentPage === 0;
   document.getElementById("nextBtn").disabled = (currentPage + 1) * itemsPerPage >= fundaciones.length;
+
 }
 
 // ----------------------
@@ -124,22 +125,28 @@ document.addEventListener("DOMContentLoaded", () => {
     setTimeout(() => form.submit(), 300);
   });
 
-  // Flechas de paginación
-  document.getElementById("prevBtn").addEventListener("click", () => {
+  document.getElementById("prevBtn").addEventListener("click", e => {
+    e.preventDefault();
     if (currentPage > 0) {
       currentPage--;
       renderFundaciones();
+      document.getElementById("fundaciones").scrollIntoView({ behavior: "smooth" });
     }
   });
-  document.getElementById("nextBtn").addEventListener("click", () => {
+
+  document.getElementById("nextBtn").addEventListener("click", e => {
+    e.preventDefault();
     if ((currentPage + 1) * itemsPerPage < fundaciones.length) {
       currentPage++;
       renderFundaciones();
+      document.getElementById("fundaciones").scrollIntoView({ behavior: "smooth" });
     }
   });
 });
 
 
+const section = document.getElementById("fundaciones");
+section.scrollIntoView({ behavior: "smooth", block: "start" });
 
 
 
