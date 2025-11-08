@@ -21,6 +21,7 @@ body{
     color: #104486;
 }
 
+
 /* Estilos para los botones */
 .btn-donar {
     color: #104486;
@@ -33,7 +34,10 @@ body{
     border-radius: 4px; /* Un poco de redondez por defecto, si la quieres */
     transition: background-color 0.1s ease, border-radius 0.1s ease; /* Transición suave */
 }
-
+.navbar{
+    padding-right: 1rem !important; /* O el valor que ya uses, pero asegúrate de que sea suficiente */
+    padding-left: 1rem !important;
+}
 /* Efecto al pasar el ratón: fondo ligeramente más oscuro y redondeado */
 .navbar-nav .nav-item.dropdown .nav-link:hover,
 .navbar-nav .nav-item.dropdown .nav-link:focus {
@@ -56,24 +60,33 @@ body{
 .dropdown-menu:hover {
     color: #fff; /* ESTA REGLA DEBE ELIMINARSE o no se aplicará correctamente */
 }
-
+.dropdown-menu.dropdown-menu-end {
+    /* 1. Fuerza la posición del borde derecho del menú a 0, anclándolo. */
+    right: 0 !important;
+    
+    /* 2. Asegura que el borde izquierdo se ajuste automáticamente. */
+    left: auto !important; 
+    
+    /* 3. Evita que el contenido largo estire el menú excesivamente. */
+    max-width: 200px; 
+}
 .dropdown-menu {
     /* Tiempo y tipo de transición: Aplica a opacidad y transformación */
     transition: opacity 0.2s ease-out, transform 0.2s ease-out;
-    /* Ajustar la visibilidad inicial */
     opacity: 0; 
-    /* Colocar el menú ligeramente más arriba al inicio para el efecto deslizante */
     transform: translateY(-5px); 
-    /* Asegurar que el menú esté oculto por defecto */
-    display: block; 
+    display: block;
+    left: 0 !important; /* Esto anularía dropdown-menu-end */
+    right: auto !important;
+    max-width: 250px; /* Un valor seguro, ajústalo si es necesario */
+    min-width: 150px; /* Asegura que no sea muy estrecho */
 }
 
 /* 2. Estilo cuando el menú está visible (desplegado) */
 .dropdown-menu.show {
-    /* Hacerlo completamente visible */
-    opacity: 1; 
-    /* Moverlo a su posición final */
-    transform: translateY(0); 
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible; 
 }
 .dropdown-menu:hover{
     color: #fff;
@@ -85,7 +98,22 @@ body{
     background-color: aquamarine;
 
 }
+/* Establece una altura fija (o mínima) para la imagen dentro del carrusel */
+.carousel-inner .carousel-item img {
+    /* 1. Altura deseada. Puedes ajustarla (ej: 70vh para 70% de la altura de la ventana). */
+    height: 780px; 
+    
+    /* 2. Propiedad clave: asegura que la imagen cubra todo el espacio sin distorsionar la proporción. */
+    object-fit: cover;
+    
+    /* 3. Evita que la imagen se mueva o cambie de tamaño al hacer scroll (opcional, pero útil) */
+    object-position: center; 
+}
 
+/* También puedes aplicar esta altura al contenedor principal para evitar saltos */
+.carousel {
+    height: 780px; /* Debe coincidir con la altura de la imagen si no usas 100%*/
+}
 /* FUNDACIONES */
 .img-fundaciones {
     border-top-left-radius: 10px;
