@@ -128,11 +128,61 @@ body{
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08); 
 }
 
+        /* Contenedor principal para centrar los botones (equivalente al div de Tailwind) */
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px; /* p-8 */
+            background-color: white;
+            border-radius: 12px; /* rounded-xl */
+        }
 
+        /* Contenedor de las flechas (flex space-x-4) */
+        .arrows-wrapper {
+            display: flex;
+            gap: 16px; /* space-x-4 */
+        }
+
+        /* Estilo general del botón */
+        .nav-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 48px; /* w-12 */
+            height: 48px; /* h-12 */
+            background-color: white;
+            color: #4b5563; /* text-gray-600 */
+            border: 1px solid #d1d5db; /* border border-gray-300 */
+            border-radius: 50%; /* rounded-full */
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-lg */
+            transition: all 0.3s ease-in-out; /* transition duration-300 ease-in-out */
+            cursor: pointer;
+            padding: 0;
+            outline: none;
+        }
+
+        /* Estado Hover: cambia a azul */
+        .nav-btn:hover {
+            background-color: #1d4ed8; /* hover:bg-blue-700 */
+            border-color: #1d4ed8; /* hover:border-blue-700 */
+            color: white; /* hover:text-white */
+        }
+
+        /* Estado Active: simula el efecto "presionado" */
+        .nav-btn:active {
+            box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.1); /* active:shadow-inner */
+        }
+
+        /* Estilo del icono SVG */
+        .nav-btn svg {
+            width: 24px; /* w-6 */
+            height: 24px; /* h-6 */
+            stroke-width: 2.5;
+        }
 .boton-enviar{
     border-radius: 10px; 
     width: 60%;
-    padding: 10px;
     display: block; 
     margin: 0 auto;
     transition: all 0.3s ease-in-out; 
@@ -184,7 +234,7 @@ body{
 .quienes-somos-texto {
     text-align: center;
     padding: 30px;
-    font-size: 1.15rem; 
+    font-size: 1.20rem; 
     line-height: 1.1; 
     color: #333; 
 }
@@ -201,6 +251,7 @@ body{
     font-weight: 800; /* Super negrita */
     margin-bottom: 20px;
     letter-spacing: 0.5px;
+    font-size: 3.0em;
 }
 
 .tittle-fundacion{

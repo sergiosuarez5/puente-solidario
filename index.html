@@ -48,10 +48,11 @@
                         <i class="bi bi-person-circle"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
-                        <li><a class="dropdown-item" href="#">Perfil</a></li>
-                        <li><a class="dropdown-item" href="#">Donaciones</a></li>
-                        <li><a class="dropdown-item" href="#">Favoritos</a></li>
-                        <li><a class="dropdown-item" href="#">Medios de pago</a></li>
+                        <li><a class="dropdown-item" href="#">Registro | Iniciar Sesión</a></li>
+<!--                         <li><a class="dropdown-item" href="#">Perfil</a></li>
+ -->                        <li><a class="dropdown-item" href="#">Donaciones</a></li>
+<!--                         <li><a class="dropdown-item" href="#">Favoritos</a></li>
+ -->                        <li><a class="dropdown-item" href="#">Medios de pago</a></li>
                         <li><a class="dropdown-item" href="#">Ajustes</a></li>
                     </ul>
                 </li>
@@ -82,27 +83,51 @@
             <div id="fundacionesContainer" class="row row-cols-1 row-cols-md-3 g-4"></div>
 
             <!-- Flechas de navegación -->
-            <div class="text-center mt-4">
+<!--             <div class="text-center mt-4">
                 <button id="prevBtn" type="button" class="btn btn-outline-secondary me-2">
                 <i class="bi bi-arrow-left"></i>
                 </button>
                 <button id="nextBtn" type="button" class="btn btn-outline-secondary">
                 <i class="bi bi-arrow-right"></i>
                 </button>
-            </div>
+            </div> -->
+        <div class="button-container">        
+        <!-- Flechas de navegación -->
+        <div class="arrows-wrapper">
+            
+            <!-- Botón Anterior (Prev) -->
+            <button id="prevBtn" type="button" class="nav-btn">
+                <!-- Icono SVG de Flecha Izquierda -->
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                </svg>
+            </button>
+            
+            <!-- Botón Siguiente (Next) -->
+            <button id="nextBtn" type="button" class="nav-btn">
+                <!-- Icono SVG de Flecha Derecha -->
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                </svg>
+            </button>
+        </div>
+
+        <p style="margin-top: 24px; font-size: 0.875rem; color: #104486;">Haz click para ver más Fundaciones.</p>
+
+    </div>
         </section>
 
         
         <!-- quienes somos -->
         <section class="quienes_somos quienes_somos_bg my-5">
-            <h2 class="h2-quienesomos text-center mb-4" id="titulo-quienes-somos">¿QUIENES SOMOS?</h2>
+            <h2 class="h2-quienesomos text-center mb-4" id="titulo-quienes-somos">¿QUIÉNES SOMOS?</h2>
                 <p class="quienes-somos-texto text-center">
                     <strong>PUENTE SOLIDARIO es la red tecnológica que conecta de manera
                     directa y transparente a fundaciones con donantes comprometidos.
                     <br><br>
                     Nacimos de la visión de un equipo de profesionales dedicados a construir un
-                    camino digital seguro y eficiente para que cada donación se convierta en un
-                    impacto real.
+                    camino digital seguro, eficiente y cada donación genere un impacto positivo. 
+                    
                     <br><br>
                     Somos los encargados de asegurar que la solidaridad fluya, utilizando la
                     tecnología para acercar la ayuda donde más se necesita.</strong>
@@ -121,7 +146,7 @@
                         <img src="assets/img/juli.png" class="rounded-circle img-fluid mb-2" alt="Julieta Bellido">
                     </a>
                     <h5>Julieta Bellido</h5>
-                    <p class="text-muted">Tester QA</p>
+                    <p class="text-muted">QA Tester</p>
                 </div>
 
                 <div class="col-md-2 member-card mb-4">
@@ -129,7 +154,7 @@
                         <img src="assets/img/mayra.png" class="rounded-circle img-fluid mb-2" alt="Mayra Limachi">
                     </a>
                     <h5>Mayra Limachi</h5>
-                    <p class="text-muted">Adm. CRM | Des. Web</p>
+                    <p class="text-muted">Adm. CRM & Web Developer</p>
                 </div>
 
                 <div class="col-md-2 member-card mb-4">
@@ -137,7 +162,7 @@
                         <img src="assets/img/lucio.png" class="rounded-circle img-fluid mb-2" alt="Lucio Lipari">
                     </a>
                     <h5>Lucio Lipari</h5>
-                    <p class="text-muted">Desarrollador Web</p>
+                    <p class="text-muted">Web Developer</p>
                 </div>
 
                 <div class="col-md-2 member-card mb-4">
@@ -145,7 +170,7 @@
                         <img src="assets/img/fotosergi.png" class="rounded-circle img-fluid mb-2" alt="Sergio Suarez">
                     </a>
                     <h5>Sergio Suarez</h5>
-                    <p class="text-muted">Desarrollador | Diseñador UI UX</p>
+                    <p class="text-muted">Web Developer & UI UX Designer</p>
                     <div class="collapse pt-3" id="sergio_bio">
                     </div>
                 </div>
@@ -320,7 +345,7 @@
                 </button>
             </div>
 
-            <a class="floating-btn donate-btn" href="#donar" aria-label="Donar" title="Donar">
+            <a class="floating-btn donate-btn" href="#donar" aria-label="Donar" title="Fundaciones">
                 <img src="assets/img/logochico.png" alt="Logo chico" width="30">
             </a>
             
